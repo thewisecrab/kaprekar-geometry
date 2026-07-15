@@ -1,0 +1,1403 @@
+{
+  "domain": "all fixed-width decimal strings including leading zeros",
+  "generated_at": "2026-07-15T11:12:49.479011+00:00",
+  "systems": {
+    "3": {
+      "attractor_count": 2,
+      "attractors": [
+        {
+          "attractor_id": 0,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              0
+            ]
+          ],
+          "cycle_values": [
+            0
+          ],
+          "maximum_reduced_depth": 0,
+          "raw_basin_probability": 0.01,
+          "raw_basin_size": 10,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 9
+          },
+          "reduced_basin_size": 1,
+          "spectrum_convergence_histogram": {
+            "0": 1
+          }
+        },
+        {
+          "attractor_id": 1,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              5
+            ]
+          ],
+          "cycle_values": [
+            495
+          ],
+          "maximum_reduced_depth": 5,
+          "raw_basin_probability": 0.99,
+          "raw_basin_size": 990,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 149,
+            "2": 144,
+            "3": 270,
+            "4": 222,
+            "5": 150,
+            "6": 54
+          },
+          "reduced_basin_size": 9,
+          "spectrum_convergence_histogram": {
+            "0": 1,
+            "1": 1,
+            "2": 2,
+            "3": 2,
+            "4": 2,
+            "5": 1
+          }
+        }
+      ],
+      "base": 10,
+      "digits": 3,
+      "graph_sha256": "5abbc829b588895b7585c10cc04b82c7dd8075e01399135b4d0be54c8ed4a955",
+      "raw_convergence_histogram": {
+        "0": 2,
+        "1": 158,
+        "2": 144,
+        "3": 270,
+        "4": 222,
+        "5": 150,
+        "6": 54
+      },
+      "raw_state_count": 1000,
+      "raw_weights_included": true,
+      "spectrum_convergence_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 1
+      },
+      "spectrum_state_count": 10,
+      "uniform_entropy_trajectory": [
+        {
+          "entropy_bits": 9.965784284662087,
+          "iteration": 0,
+          "support_size": 1000
+        },
+        {
+          "entropy_bits": 3.13918860862935,
+          "iteration": 1,
+          "support_size": 10
+        },
+        {
+          "entropy_bits": 2.215674072106665,
+          "iteration": 2,
+          "support_size": 6
+        },
+        {
+          "entropy_bits": 1.6524109899393609,
+          "iteration": 3,
+          "support_size": 5
+        },
+        {
+          "entropy_bits": 0.9774272702467395,
+          "iteration": 4,
+          "support_size": 4
+        },
+        {
+          "entropy_bits": 0.3831397010663192,
+          "iteration": 5,
+          "support_size": 3
+        },
+        {
+          "entropy_bits": 0.08079313589591101,
+          "iteration": 6,
+          "support_size": 2
+        }
+      ]
+    },
+    "4": {
+      "attractor_count": 2,
+      "attractors": [
+        {
+          "attractor_id": 0,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              0,
+              0
+            ]
+          ],
+          "cycle_values": [
+            0
+          ],
+          "maximum_reduced_depth": 0,
+          "raw_basin_probability": 0.001,
+          "raw_basin_size": 10,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 9
+          },
+          "reduced_basin_size": 1,
+          "spectrum_convergence_histogram": {
+            "0": 1
+          }
+        },
+        {
+          "attractor_id": 1,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              6,
+              2
+            ]
+          ],
+          "cycle_values": [
+            6174
+          ],
+          "maximum_reduced_depth": 6,
+          "raw_basin_probability": 0.999,
+          "raw_basin_size": 9990,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 383,
+            "2": 576,
+            "3": 2400,
+            "4": 1272,
+            "5": 1518,
+            "6": 1656,
+            "7": 2184
+          },
+          "reduced_basin_size": 54,
+          "spectrum_convergence_histogram": {
+            "0": 1,
+            "1": 3,
+            "2": 12,
+            "3": 10,
+            "4": 10,
+            "5": 10,
+            "6": 8
+          }
+        }
+      ],
+      "base": 10,
+      "digits": 4,
+      "graph_sha256": "dce0476b8aa3c8474c1844add036e6133b021e18b1bf6bf0c41e8e9f39e568f6",
+      "raw_convergence_histogram": {
+        "0": 2,
+        "1": 392,
+        "2": 576,
+        "3": 2400,
+        "4": 1272,
+        "5": 1518,
+        "6": 1656,
+        "7": 2184
+      },
+      "raw_state_count": 10000,
+      "raw_weights_included": true,
+      "spectrum_convergence_histogram": {
+        "0": 2,
+        "1": 3,
+        "2": 12,
+        "3": 10,
+        "4": 10,
+        "5": 10,
+        "6": 8
+      },
+      "spectrum_state_count": 55,
+      "uniform_entropy_trajectory": [
+        {
+          "entropy_bits": 13.287712379549449,
+          "iteration": 0,
+          "support_size": 10000
+        },
+        {
+          "entropy_bits": 5.394341330990955,
+          "iteration": 1,
+          "support_size": 55
+        },
+        {
+          "entropy_bits": 4.0620985608764455,
+          "iteration": 2,
+          "support_size": 21
+        },
+        {
+          "entropy_bits": 3.251697097184512,
+          "iteration": 3,
+          "support_size": 15
+        },
+        {
+          "entropy_bits": 2.6456813898813225,
+          "iteration": 4,
+          "support_size": 11
+        },
+        {
+          "entropy_bits": 1.9332944144260265,
+          "iteration": 5,
+          "support_size": 8
+        },
+        {
+          "entropy_bits": 1.0943216995479326,
+          "iteration": 6,
+          "support_size": 5
+        },
+        {
+          "entropy_bits": 0.011407757737460177,
+          "iteration": 7,
+          "support_size": 2
+        }
+      ]
+    },
+    "5": {
+      "attractor_count": 4,
+      "attractors": [
+        {
+          "attractor_id": 0,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              0,
+              0
+            ]
+          ],
+          "cycle_values": [
+            0
+          ],
+          "maximum_reduced_depth": 0,
+          "raw_basin_probability": 0.0001,
+          "raw_basin_size": 10,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 9
+          },
+          "reduced_basin_size": 1,
+          "spectrum_convergence_histogram": {
+            "0": 1
+          }
+        },
+        {
+          "attractor_id": 1,
+          "cycle_length": 2,
+          "cycle_spectra": [
+            [
+              5,
+              4
+            ],
+            [
+              6,
+              0
+            ]
+          ],
+          "cycle_values": [
+            53955,
+            59994
+          ],
+          "maximum_reduced_depth": 1,
+          "raw_basin_probability": 0.0319,
+          "raw_basin_size": 3190,
+          "raw_convergence_histogram": {
+            "0": 2,
+            "1": 2738,
+            "2": 450
+          },
+          "reduced_basin_size": 3,
+          "spectrum_convergence_histogram": {
+            "0": 2,
+            "1": 1
+          }
+        },
+        {
+          "attractor_id": 2,
+          "cycle_length": 4,
+          "cycle_spectra": [
+            [
+              6,
+              2
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              7,
+              6
+            ],
+            [
+              6,
+              4
+            ]
+          ],
+          "cycle_values": [
+            61974,
+            82962,
+            75933,
+            63954
+          ],
+          "maximum_reduced_depth": 5,
+          "raw_basin_probability": 0.4848,
+          "raw_basin_size": 48480,
+          "raw_convergence_histogram": {
+            "0": 4,
+            "1": 13176,
+            "2": 10000,
+            "3": 12780,
+            "4": 4680,
+            "5": 4340,
+            "6": 3500
+          },
+          "reduced_basin_size": 21,
+          "spectrum_convergence_histogram": {
+            "0": 4,
+            "1": 5,
+            "2": 6,
+            "3": 2,
+            "4": 3,
+            "5": 1
+          }
+        },
+        {
+          "attractor_id": 3,
+          "cycle_length": 4,
+          "cycle_spectra": [
+            [
+              6,
+              3
+            ],
+            [
+              7,
+              2
+            ],
+            [
+              8,
+              4
+            ],
+            [
+              7,
+              5
+            ]
+          ],
+          "cycle_values": [
+            62964,
+            71973,
+            83952,
+            74943
+          ],
+          "maximum_reduced_depth": 5,
+          "raw_basin_probability": 0.4832,
+          "raw_basin_size": 48320,
+          "raw_convergence_histogram": {
+            "0": 4,
+            "1": 15116,
+            "2": 7880,
+            "3": 8220,
+            "4": 12900,
+            "5": 4110,
+            "6": 90
+          },
+          "reduced_basin_size": 30,
+          "spectrum_convergence_histogram": {
+            "0": 4,
+            "1": 7,
+            "2": 5,
+            "3": 7,
+            "4": 6,
+            "5": 1
+          }
+        }
+      ],
+      "base": 10,
+      "digits": 5,
+      "graph_sha256": "1bc934e32801c08dff5f07b9a8e914a562f6344c979306aede616c483a1c60de",
+      "raw_convergence_histogram": {
+        "0": 11,
+        "1": 31039,
+        "2": 18330,
+        "3": 21000,
+        "4": 17580,
+        "5": 8450,
+        "6": 3590
+      },
+      "raw_state_count": 100000,
+      "raw_weights_included": true,
+      "spectrum_convergence_histogram": {
+        "0": 11,
+        "1": 13,
+        "2": 11,
+        "3": 9,
+        "4": 9,
+        "5": 2
+      },
+      "spectrum_state_count": 55,
+      "uniform_entropy_trajectory": [
+        {
+          "entropy_bits": 16.609640474436812,
+          "iteration": 0,
+          "support_size": 100000
+        },
+        {
+          "entropy_bits": 5.365712643181429,
+          "iteration": 1,
+          "support_size": 55
+        },
+        {
+          "entropy_bits": 4.400848171746501,
+          "iteration": 2,
+          "support_size": 27
+        },
+        {
+          "entropy_bits": 3.788036432936528,
+          "iteration": 3,
+          "support_size": 21
+        },
+        {
+          "entropy_bits": 3.3938459308358055,
+          "iteration": 4,
+          "support_size": 16
+        },
+        {
+          "entropy_bits": 3.175399419723079,
+          "iteration": 5,
+          "support_size": 13
+        },
+        {
+          "entropy_bits": 3.071736821781362,
+          "iteration": 6,
+          "support_size": 11
+        }
+      ]
+    },
+    "6": {
+      "attractor_count": 4,
+      "attractors": [
+        {
+          "attractor_id": 0,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "cycle_values": [
+            0
+          ],
+          "maximum_reduced_depth": 0,
+          "raw_basin_probability": 1e-05,
+          "raw_basin_size": 10,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 9
+          },
+          "reduced_basin_size": 1,
+          "spectrum_convergence_histogram": {
+            "0": 1
+          }
+        },
+        {
+          "attractor_id": 1,
+          "cycle_length": 7,
+          "cycle_spectra": [
+            [
+              4,
+              2,
+              1
+            ],
+            [
+              8,
+              5,
+              2
+            ],
+            [
+              7,
+              5,
+              1
+            ],
+            [
+              8,
+              4,
+              1
+            ],
+            [
+              8,
+              6,
+              1
+            ],
+            [
+              8,
+              6,
+              3
+            ],
+            [
+              6,
+              4,
+              3
+            ]
+          ],
+          "cycle_values": [
+            420876,
+            851742,
+            750843,
+            840852,
+            860832,
+            862632,
+            642654
+          ],
+          "maximum_reduced_depth": 12,
+          "raw_basin_probability": 0.93552,
+          "raw_basin_size": 935520,
+          "raw_convergence_histogram": {
+            "0": 7,
+            "1": 82433,
+            "10": 48836,
+            "11": 20428,
+            "12": 39600,
+            "13": 660,
+            "2": 146040,
+            "3": 95400,
+            "4": 78360,
+            "5": 98308,
+            "6": 86820,
+            "7": 76440,
+            "8": 91760,
+            "9": 70428
+          },
+          "reduced_basin_size": 201,
+          "spectrum_convergence_histogram": {
+            "0": 7,
+            "1": 21,
+            "10": 5,
+            "11": 7,
+            "12": 1,
+            "2": 16,
+            "3": 19,
+            "4": 31,
+            "5": 27,
+            "6": 19,
+            "7": 15,
+            "8": 15,
+            "9": 18
+          }
+        },
+        {
+          "attractor_id": 2,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              5,
+              5,
+              0
+            ]
+          ],
+          "cycle_values": [
+            549945
+          ],
+          "maximum_reduced_depth": 0,
+          "raw_basin_probability": 0.00195,
+          "raw_basin_size": 1950,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 1949
+          },
+          "reduced_basin_size": 1,
+          "spectrum_convergence_histogram": {
+            "0": 1
+          }
+        },
+        {
+          "attractor_id": 3,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              6,
+              3,
+              2
+            ]
+          ],
+          "cycle_values": [
+            631764
+          ],
+          "maximum_reduced_depth": 3,
+          "raw_basin_probability": 0.06252,
+          "raw_basin_size": 62520,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 8159,
+            "2": 12360,
+            "3": 39120,
+            "4": 2880
+          },
+          "reduced_basin_size": 17,
+          "spectrum_convergence_histogram": {
+            "0": 1,
+            "1": 4,
+            "2": 9,
+            "3": 3
+          }
+        }
+      ],
+      "base": 10,
+      "digits": 6,
+      "graph_sha256": "aabc5c5dbe49e36de7a758760fbd5a0547796ae2d31e501f29ca1fc5644b4ecc",
+      "raw_convergence_histogram": {
+        "0": 10,
+        "1": 92550,
+        "10": 48836,
+        "11": 20428,
+        "12": 39600,
+        "13": 660,
+        "2": 158400,
+        "3": 134520,
+        "4": 81240,
+        "5": 98308,
+        "6": 86820,
+        "7": 76440,
+        "8": 91760,
+        "9": 70428
+      },
+      "raw_state_count": 1000000,
+      "raw_weights_included": true,
+      "spectrum_convergence_histogram": {
+        "0": 10,
+        "1": 25,
+        "10": 5,
+        "11": 7,
+        "12": 1,
+        "2": 25,
+        "3": 22,
+        "4": 31,
+        "5": 27,
+        "6": 19,
+        "7": 15,
+        "8": 15,
+        "9": 18
+      },
+      "spectrum_state_count": 220,
+      "uniform_entropy_trajectory": [
+        {
+          "entropy_bits": 19.931568569324174,
+          "iteration": 0,
+          "support_size": 1000000
+        },
+        {
+          "entropy_bits": 7.165135976215345,
+          "iteration": 1,
+          "support_size": 220
+        },
+        {
+          "entropy_bits": 5.806056147214668,
+          "iteration": 2,
+          "support_size": 83
+        },
+        {
+          "entropy_bits": 5.146775740166706,
+          "iteration": 3,
+          "support_size": 54
+        },
+        {
+          "entropy_bits": 4.748207867026802,
+          "iteration": 4,
+          "support_size": 41
+        },
+        {
+          "entropy_bits": 4.35455265624425,
+          "iteration": 5,
+          "support_size": 32
+        },
+        {
+          "entropy_bits": 4.01984215971797,
+          "iteration": 6,
+          "support_size": 26
+        },
+        {
+          "entropy_bits": 3.8214486797131073,
+          "iteration": 7,
+          "support_size": 22
+        },
+        {
+          "entropy_bits": 3.5917637203639248,
+          "iteration": 8,
+          "support_size": 19
+        },
+        {
+          "entropy_bits": 3.3903768172701465,
+          "iteration": 9,
+          "support_size": 17
+        },
+        {
+          "entropy_bits": 3.2177627800226145,
+          "iteration": 10,
+          "support_size": 15
+        },
+        {
+          "entropy_bits": 3.1286192228514667,
+          "iteration": 11,
+          "support_size": 13
+        },
+        {
+          "entropy_bits": 2.9778205264003135,
+          "iteration": 12,
+          "support_size": 11
+        },
+        {
+          "entropy_bits": 2.971779905218725,
+          "iteration": 13,
+          "support_size": 10
+        }
+      ]
+    },
+    "7": {
+      "attractor_count": 2,
+      "attractors": [
+        {
+          "attractor_id": 0,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "cycle_values": [
+            0
+          ],
+          "maximum_reduced_depth": 0,
+          "raw_basin_probability": 1e-06,
+          "raw_basin_size": 10,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 9
+          },
+          "reduced_basin_size": 1,
+          "spectrum_convergence_histogram": {
+            "0": 1
+          }
+        },
+        {
+          "attractor_id": 1,
+          "cycle_length": 8,
+          "cycle_spectra": [
+            [
+              7,
+              5,
+              1
+            ],
+            [
+              9,
+              5,
+              3
+            ],
+            [
+              8,
+              7,
+              2
+            ],
+            [
+              8,
+              6,
+              5
+            ],
+            [
+              7,
+              5,
+              2
+            ],
+            [
+              8,
+              4,
+              3
+            ],
+            [
+              7,
+              6,
+              2
+            ],
+            [
+              8,
+              4,
+              4
+            ]
+          ],
+          "cycle_values": [
+            7509843,
+            9529641,
+            8719722,
+            8649432,
+            7519743,
+            8429652,
+            7619733,
+            8439552
+          ],
+          "maximum_reduced_depth": 12,
+          "raw_basin_probability": 0.999999,
+          "raw_basin_size": 9999990,
+          "raw_convergence_histogram": {
+            "0": 8,
+            "1": 840972,
+            "10": 191772,
+            "11": 218050,
+            "12": 45486,
+            "13": 1806,
+            "2": 899948,
+            "3": 940030,
+            "4": 965384,
+            "5": 823032,
+            "6": 1798888,
+            "7": 1892422,
+            "8": 718438,
+            "9": 663754
+          },
+          "reduced_basin_size": 219,
+          "spectrum_convergence_histogram": {
+            "0": 8,
+            "1": 17,
+            "10": 5,
+            "11": 4,
+            "12": 2,
+            "2": 20,
+            "3": 25,
+            "4": 21,
+            "5": 27,
+            "6": 38,
+            "7": 24,
+            "8": 20,
+            "9": 8
+          }
+        }
+      ],
+      "base": 10,
+      "digits": 7,
+      "graph_sha256": "56c2c45bc885f5c42955f596e2f5da6087d55d35e631cd6c9d910fa3464a2450",
+      "raw_convergence_histogram": {
+        "0": 9,
+        "1": 840981,
+        "10": 191772,
+        "11": 218050,
+        "12": 45486,
+        "13": 1806,
+        "2": 899948,
+        "3": 940030,
+        "4": 965384,
+        "5": 823032,
+        "6": 1798888,
+        "7": 1892422,
+        "8": 718438,
+        "9": 663754
+      },
+      "raw_state_count": 10000000,
+      "raw_weights_included": true,
+      "spectrum_convergence_histogram": {
+        "0": 9,
+        "1": 17,
+        "10": 5,
+        "11": 4,
+        "12": 2,
+        "2": 20,
+        "3": 25,
+        "4": 21,
+        "5": 27,
+        "6": 38,
+        "7": 24,
+        "8": 20,
+        "9": 8
+      },
+      "spectrum_state_count": 220,
+      "uniform_entropy_trajectory": [
+        {
+          "entropy_bits": 23.253496664211536,
+          "iteration": 0,
+          "support_size": 10000000
+        },
+        {
+          "entropy_bits": 7.114171011764186,
+          "iteration": 1,
+          "support_size": 220
+        },
+        {
+          "entropy_bits": 5.899407052910841,
+          "iteration": 2,
+          "support_size": 91
+        },
+        {
+          "entropy_bits": 5.147087616364347,
+          "iteration": 3,
+          "support_size": 61
+        },
+        {
+          "entropy_bits": 4.645031657901012,
+          "iteration": 4,
+          "support_size": 44
+        },
+        {
+          "entropy_bits": 4.153817295482489,
+          "iteration": 5,
+          "support_size": 33
+        },
+        {
+          "entropy_bits": 3.6482833110817086,
+          "iteration": 6,
+          "support_size": 25
+        },
+        {
+          "entropy_bits": 3.375837400928622,
+          "iteration": 7,
+          "support_size": 19
+        },
+        {
+          "entropy_bits": 3.2002938049010043,
+          "iteration": 8,
+          "support_size": 15
+        },
+        {
+          "entropy_bits": 3.05315755562869,
+          "iteration": 9,
+          "support_size": 13
+        },
+        {
+          "entropy_bits": 2.992093983286527,
+          "iteration": 10,
+          "support_size": 12
+        },
+        {
+          "entropy_bits": 2.9237752958883543,
+          "iteration": 11,
+          "support_size": 11
+        },
+        {
+          "entropy_bits": 2.898296430946605,
+          "iteration": 12,
+          "support_size": 10
+        },
+        {
+          "entropy_bits": 2.8963214819121474,
+          "iteration": 13,
+          "support_size": 9
+        }
+      ]
+    },
+    "8": {
+      "attractor_count": 5,
+      "attractors": [
+        {
+          "attractor_id": 0,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "cycle_values": [
+            0
+          ],
+          "maximum_reduced_depth": 0,
+          "raw_basin_probability": 1e-07,
+          "raw_basin_size": 10,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 9
+          },
+          "reduced_basin_size": 1,
+          "spectrum_convergence_histogram": {
+            "0": 1
+          }
+        },
+        {
+          "attractor_id": 1,
+          "cycle_length": 7,
+          "cycle_spectra": [
+            [
+              4,
+              3,
+              2,
+              1
+            ],
+            [
+              8,
+              5,
+              3,
+              2
+            ],
+            [
+              7,
+              5,
+              3,
+              1
+            ],
+            [
+              8,
+              4,
+              3,
+              1
+            ],
+            [
+              8,
+              6,
+              3,
+              1
+            ],
+            [
+              8,
+              6,
+              3,
+              3
+            ],
+            [
+              6,
+              4,
+              3,
+              3
+            ]
+          ],
+          "cycle_values": [
+            43208766,
+            85317642,
+            75308643,
+            84308652,
+            86308632,
+            86326632,
+            64326654
+          ],
+          "maximum_reduced_depth": 14,
+          "raw_basin_probability": 0.48782098,
+          "raw_basin_size": 48782098,
+          "raw_convergence_histogram": {
+            "0": 7,
+            "1": 3107993,
+            "10": 2051392,
+            "11": 1613696,
+            "12": 2577096,
+            "13": 1035552,
+            "14": 1829912,
+            "15": 539592,
+            "2": 9404416,
+            "3": 8801296,
+            "4": 5886160,
+            "5": 3222128,
+            "6": 1896706,
+            "7": 1940568,
+            "8": 2303840,
+            "9": 2571744
+          },
+          "reduced_basin_size": 323,
+          "spectrum_convergence_histogram": {
+            "0": 7,
+            "1": 40,
+            "10": 15,
+            "11": 18,
+            "12": 10,
+            "13": 21,
+            "14": 7,
+            "2": 41,
+            "3": 36,
+            "4": 30,
+            "5": 31,
+            "6": 20,
+            "7": 14,
+            "8": 18,
+            "9": 15
+          }
+        },
+        {
+          "attractor_id": 2,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              6,
+              3,
+              3,
+              2
+            ]
+          ],
+          "cycle_values": [
+            63317664
+          ],
+          "maximum_reduced_depth": 3,
+          "raw_basin_probability": 0.00599536,
+          "raw_basin_size": 599536,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 69439,
+            "2": 198240,
+            "3": 308336,
+            "4": 23520
+          },
+          "reduced_basin_size": 14,
+          "spectrum_convergence_histogram": {
+            "0": 1,
+            "1": 5,
+            "2": 7,
+            "3": 1
+          }
+        },
+        {
+          "attractor_id": 3,
+          "cycle_length": 3,
+          "cycle_spectra": [
+            [
+              6,
+              4,
+              3,
+              1
+            ],
+            [
+              8,
+              3,
+              2,
+              1
+            ],
+            [
+              8,
+              6,
+              5,
+              3
+            ]
+          ],
+          "cycle_values": [
+            64308654,
+            83208762,
+            86526432
+          ],
+          "maximum_reduced_depth": 18,
+          "raw_basin_probability": 0.48247316,
+          "raw_basin_size": 48247316,
+          "raw_convergence_histogram": {
+            "0": 3,
+            "1": 1128957,
+            "10": 3224498,
+            "11": 2619400,
+            "12": 4484848,
+            "13": 4048464,
+            "14": 1953224,
+            "15": 2076256,
+            "16": 1281280,
+            "17": 1802934,
+            "18": 1745856,
+            "19": 3360,
+            "2": 5179440,
+            "3": 4323872,
+            "4": 3853304,
+            "5": 1542576,
+            "6": 1725234,
+            "7": 2112600,
+            "8": 2127048,
+            "9": 3014162
+          },
+          "reduced_basin_size": 371,
+          "spectrum_convergence_histogram": {
+            "0": 3,
+            "1": 20,
+            "10": 20,
+            "11": 21,
+            "12": 18,
+            "13": 21,
+            "14": 17,
+            "15": 14,
+            "16": 12,
+            "17": 17,
+            "18": 1,
+            "2": 25,
+            "3": 22,
+            "4": 15,
+            "5": 18,
+            "6": 31,
+            "7": 33,
+            "8": 34,
+            "9": 29
+          }
+        },
+        {
+          "attractor_id": 4,
+          "cycle_length": 1,
+          "cycle_spectra": [
+            [
+              9,
+              7,
+              5,
+              1
+            ]
+          ],
+          "cycle_values": [
+            97508421
+          ],
+          "maximum_reduced_depth": 2,
+          "raw_basin_probability": 0.0237104,
+          "raw_basin_size": 2371040,
+          "raw_convergence_histogram": {
+            "0": 1,
+            "1": 604799,
+            "2": 1505280,
+            "3": 260960
+          },
+          "reduced_basin_size": 6,
+          "spectrum_convergence_histogram": {
+            "0": 1,
+            "1": 3,
+            "2": 2
+          }
+        }
+      ],
+      "base": 10,
+      "digits": 8,
+      "graph_sha256": "10876a84704856f220ad0488c76c7765590286b4728cf57e4c77df0fbd46b1d6",
+      "raw_convergence_histogram": {
+        "0": 13,
+        "1": 4911197,
+        "10": 5275890,
+        "11": 4233096,
+        "12": 7061944,
+        "13": 5084016,
+        "14": 3783136,
+        "15": 2615848,
+        "16": 1281280,
+        "17": 1802934,
+        "18": 1745856,
+        "19": 3360,
+        "2": 16287376,
+        "3": 13694464,
+        "4": 9762984,
+        "5": 4764704,
+        "6": 3621940,
+        "7": 4053168,
+        "8": 4430888,
+        "9": 5585906
+      },
+      "raw_state_count": 100000000,
+      "raw_weights_included": true,
+      "spectrum_convergence_histogram": {
+        "0": 13,
+        "1": 68,
+        "10": 35,
+        "11": 39,
+        "12": 28,
+        "13": 42,
+        "14": 24,
+        "15": 14,
+        "16": 12,
+        "17": 17,
+        "18": 1,
+        "2": 75,
+        "3": 59,
+        "4": 45,
+        "5": 49,
+        "6": 51,
+        "7": 47,
+        "8": 52,
+        "9": 44
+      },
+      "spectrum_state_count": 715,
+      "uniform_entropy_trajectory": [
+        {
+          "entropy_bits": 26.575424759098897,
+          "iteration": 0,
+          "support_size": 100000000
+        },
+        {
+          "entropy_bits": 8.62489692648571,
+          "iteration": 1,
+          "support_size": 715
+        },
+        {
+          "entropy_bits": 6.8607563171006305,
+          "iteration": 2,
+          "support_size": 235
+        },
+        {
+          "entropy_bits": 5.9559868815511745,
+          "iteration": 3,
+          "support_size": 134
+        },
+        {
+          "entropy_bits": 5.417857948531107,
+          "iteration": 4,
+          "support_size": 89
+        },
+        {
+          "entropy_bits": 5.177213283450102,
+          "iteration": 5,
+          "support_size": 69
+        },
+        {
+          "entropy_bits": 4.965317635151251,
+          "iteration": 6,
+          "support_size": 56
+        },
+        {
+          "entropy_bits": 4.797547144821562,
+          "iteration": 7,
+          "support_size": 46
+        },
+        {
+          "entropy_bits": 4.64497365161313,
+          "iteration": 8,
+          "support_size": 39
+        },
+        {
+          "entropy_bits": 4.476266734233168,
+          "iteration": 9,
+          "support_size": 35
+        },
+        {
+          "entropy_bits": 4.306530001069106,
+          "iteration": 10,
+          "support_size": 32
+        },
+        {
+          "entropy_bits": 4.136878150618622,
+          "iteration": 11,
+          "support_size": 29
+        },
+        {
+          "entropy_bits": 3.920140676154186,
+          "iteration": 12,
+          "support_size": 26
+        },
+        {
+          "entropy_bits": 3.753977160814348,
+          "iteration": 13,
+          "support_size": 23
+        },
+        {
+          "entropy_bits": 3.6153348335688893,
+          "iteration": 14,
+          "support_size": 20
+        },
+        {
+          "entropy_bits": 3.5024060137569872,
+          "iteration": 15,
+          "support_size": 17
+        },
+        {
+          "entropy_bits": 3.4396530998284613,
+          "iteration": 16,
+          "support_size": 16
+        },
+        {
+          "entropy_bits": 3.359442823727671,
+          "iteration": 17,
+          "support_size": 15
+        },
+        {
+          "entropy_bits": 3.2765309630929775,
+          "iteration": 18,
+          "support_size": 14
+        },
+        {
+          "entropy_bits": 3.2760761014214785,
+          "iteration": 19,
+          "support_size": 13
+        }
+      ]
+    }
+  }
+}

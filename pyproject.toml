@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kaprekar-geometry"
+version = "0.1.0"
+description = "Exact Kaprekar arithmetic, logit geometry, dynamics, and verification"
+readme = "README.md"
+authors = [
+  { name = "Siddharth Nilesh Patel" },
+]
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["kaprekar", "finite-dynamical-systems", "uncertainty", "logits"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.urls]
+Homepage = "https://github.com/thewisecrab/kaprekar-geometry"
+Repository = "https://github.com/thewisecrab/kaprekar-geometry"
+Issues = "https://github.com/thewisecrab/kaprekar-geometry/issues"
+
+[project.optional-dependencies]
+benchmark = ["numpy>=1.26"]
+
+[project.scripts]
+kaprekar = "kaprekar.cli:entrypoint"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

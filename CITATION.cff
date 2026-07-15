@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: >-
+  If you use this research package, please cite it using the metadata below.
+title: Kaprekar Geometry
+type: software
+authors:
+  - family-names: Patel
+    given-names: Siddharth Nilesh
+version: 0.1.0
+date-released: "2026-07-15"
+repository-code: "https://github.com/thewisecrab/kaprekar-geometry"
+url: "https://github.com/thewisecrab/kaprekar-geometry"
+preferred-citation:
+  type: article
+  title: >-
+    From Kaprekar Dynamics to Logit Geometry: Exact Compression, Weighted
+    Basins, and Limits of a Sorted-Logit Representation
+  authors:
+    - family-names: Patel
+      given-names: Siddharth Nilesh
+  year: 2026

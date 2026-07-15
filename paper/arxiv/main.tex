@@ -1,0 +1,1069 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{placeins}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\hypersetup{
+  pdftitle={From Kaprekar Dynamics to Logit Geometry: Exact Compression, Weighted Basins, and Limits of a Sorted-Logit Representation},
+  pdfauthor={Siddharth Nilesh Patel},
+  pdfsubject={Finite dynamical systems, Kaprekar maps, logit geometry, and speculative decoding},
+  pdfkeywords={Kaprekar routine, finite dynamical systems, functional graphs, entropy, logit geometry, uncertainty estimation, speculative decoding}
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\Basin}{\operatorname{Basin}}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\indeg}{\operatorname{indeg}}
+\newcommand{\supp}{\operatorname{supp}}
+\DeclareMathOperator{\ImMap}{Im}
+
+\title{\textbf{From Kaprekar Dynamics to Logit Geometry:}\\
+Exact Compression, Weighted Basins, and Limits of a Sorted-Logit Representation}
+\author{Siddharth Nilesh Patel}
+\date{July 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The Kaprekar routine is a finite digit-rearrangement dynamical system whose
+best-known decimal fixed point is 6174.  Outer-digit difference coordinates
+for this routine are classical.  Starting from that prior art, this paper
+gives an explicit integer linear reconstruction, proves that it is injective,
+and derives the exact one-step image size
+\[
+  \left|\ImMap K_{b,n}\right|
+  =\binom{b+\lfloor n/2\rfloor-1}{b-1}.
+\]
+The restriction of the full map to its one-step image is conjugate to a
+reduced map on spectra.  With exact spectrum-fiber weights, this conjugacy
+recovers the complete functional graph, raw-state basin sizes, hitting-time
+histograms, and entropy evolution in polynomial time for every fixed base.
+Certified decimal computations show that nontrivial cycles, rather than fixed
+points, capture most raw inputs at widths five through eight.
+
+The same adjacent-gap operator yields normalized coordinates for sorted
+top-$k$ language-model logits.  We prove reconstruction, singularity at a
+flat spectrum, near-flat sensitivity, change-of-$k$ behavior, sharp omitted-tail
+bounds, and a distribution-free calibration impossibility.  These coordinates
+are exactly an invertible reparameterization of relative sorted logits; no
+predictive improvement follows from the reparameterization alone.  We also
+derive the exact accept-and-residual condition for distribution-preserving
+speculative sampling and show why a target-only rank or margin gate is not
+exact in general.  An independent integer-arithmetic checker exhaustively
+verifies 49 finite systems comprising 3,816,497 raw states, while a separate
+Lean development mechanizes the core pairing identities and part of the
+counting argument.  No empirical large-language-model performance claim is
+made.
+\end{abstract}
+
+\noindent\textbf{Keywords:}
+Kaprekar routine; finite dynamical systems; functional graphs; exact basin
+weights; entropy; sorted logits; uncertainty estimation; speculative decoding.
+
+\section{Introduction}
+
+Kaprekar's digit-rearrangement routine begins with a fixed-width digit string,
+sorts its digits in descending and ascending order, and subtracts the latter
+number from the former.  The decimal fixed points 495 and 6174 made the routine
+widely known \cite{kaprekar1949,kaprekar1955}.  The broader mathematical object
+is not a single constant, however, but a family of finite functional graphs
+indexed by the base and the width.  Longer widths and other bases exhibit
+multiple fixed points, genuine cycles, and nonuniform basins
+\cite{hasse1978,prichett1981,walden2005,kay2022,kay2024}.
+
+The first purpose of this paper is to make a precise compression theorem for
+these graphs.  Prichett, Ludington, and Lapenta already observed that a
+Kaprekar transform depends entirely on ordered outer-digit differences
+\cite{prichett1981}; this dependence is therefore not claimed as new.  The
+contribution developed here is the chain of consequences obtained from an
+explicit linear map and its injectivity: an exact image count, a conjugacy
+after the first step, reconstruction of the full functional graph from a
+weighted reduced graph, polynomial fixed-base basin computation, and an exact
+entropy pushforward identity.
+
+The second purpose is to delimit a proposed analogy with language-model
+logits.  Sorted top-$k$ logits can be represented by normalized adjacent gaps.
+This is a clean coordinate system, but it is an invertible reparameterization
+of relative sorted logits, not a source of additional information.  It also
+discards token identity and, unless supplied separately, tail information.
+Accordingly, this paper proves only structural identities and impossibility
+results for these coordinates.  It does not report or imply a gain in
+hallucination detection, selective prediction, routing, or decoding speed.
+
+The main contributions are:
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+  \item an explicit factorization $K_{b,n}=\Lambda_{b,n}\circ\Sigma_{b,n}$,
+        a superincreasing proof of injectivity, and an exact image-cardinality
+        theorem valid also for width one;
+  \item an exact conjugacy on the one-step image and a reconstruction theorem
+        for the entire raw functional graph using spectrum-fiber weights;
+  \item exact raw basin, depth, and entropy formulas, together with certified
+        decimal results showing cycle-dominated dynamics at widths five
+        through eight;
+  \item a corrected account of normalized sorted-logit gaps, including their
+        exact information content, degeneracies, sensitivity, tail limits,
+        and distribution-free limitations; and
+  \item an exact acceptance/residual theorem for speculative sampling and a
+        reproducibility package with independent exhaustive certificates and
+        partial formal verification.
+\end{enumerate}
+
+\paragraph{Evidence discipline.}
+Universal algebraic results, finite computational certificates, and empirical
+hypotheses are kept separate.  Exhaustive computation can prove a declared
+finite instance and can falsify an implementation, but it is not substituted
+for proofs over infinitely many $(b,n)$.  Conversely, theorems about a
+coordinate system do not establish predictive value on real model outputs.
+
+\section{Prior work and novelty boundary}
+
+\subsection{Kaprekar dynamics}
+
+The classical literature classified four-digit constants and decimal fixed
+points \cite{hasse1978,prichett1981}.  The 1981 paper explicitly introduced
+arbitrary-base outer-difference tuples and stated that the transformation
+depends entirely on them.  Later work studied higher bases, symmetries, fixed
+points, cycles, and convergence distances
+\cite{walden2005,devlin2020,nuez2022,kay2022,kay2024}.  Iwasaki gave an
+explicit modern classification of decimal nonzero fixed points and clarified
+the distinction between a fixed point and a globally attracting Kaprekar
+constant \cite{iwasaki2024}.  Dahl analyzed attractor-basin entropy and
+coarse-grained drift fields for decimal systems \cite{dahl2026}.
+
+Very recent work by Chen, Ono, Schwartz, and Thakur gives a much stronger
+number-theoretic classification for four-digit odd bases: after a bounded
+transient, the stable dynamics are conjugate to projective doubling
+\cite{chenkaprekar2026}.  That specialized theorem and its separate Lean
+artifact should not be replaced by generic enumeration.  The present results
+are complementary: they hold for arbitrary base and width and expose exact
+image, graph, and weight structure, but do not reproduce the odd-base
+classification.
+
+The defensible novelty claim is therefore deliberately narrow.  We do not
+claim the discovery of outer-gap reduction.  We claim the explicit
+superincreasing encoding, exact image cardinality, post-first-step conjugacy,
+complete weighted-graph reconstruction, and their information-theoretic
+consequences.
+
+\subsection{Logit uncertainty and speculative decoding}
+
+Output-side uncertainty estimates coexist with semantic and internal-state
+methods \cite{azaria2023,farquhar2024,kossen2024,ma2025}.  Recent evidence
+shows that entropy-only selective policies can fail in model-dependent ways
+and that hybrid scores can improve measured risk--coverage behavior on some
+benchmarks \cite{phillips2026}.  Other direct baselines include logit-magnitude
+methods \cite{zhu2026} and local sorted-logit geometry such as Min-$k$
+sampling \cite{ding2026}.  These works make an information-matched raw
+relative-logit baseline mandatory for any future experiment on the coordinates
+studied here.
+
+Exact speculative decoding uses modified rejection sampling to preserve the
+target distribution \cite{leviathan2023,chen2023speculative}.  Margin-aware
+relaxed verification has already been studied at model scale by MARS
+\cite{song2026mars}, and recent acceptance-certificate theory gives sharper
+criteria for several deterministic and relaxed rules \cite{sharma2026}.
+Consequently, the margin identity in this paper is presented as an elementary
+diagnostic, not as a novel distribution-preserving decoder.
+
+\section{Kaprekar maps and ordered outer gaps}
+
+Fix a base $b\geq2$ and a width $n\geq1$.  Let
+\[
+  X_{b,n}=\{0,1,\ldots,b^n-1\},
+\]
+where every element is represented by exactly $n$ base-$b$ digits, including
+leading zeros.  If the digits sorted in descending order are
+\[
+  a_1\geq a_2\geq\cdots\geq a_n,
+\]
+define the fixed-width Kaprekar map
+\begin{equation}\label{eq:kaprekar-map}
+  K_{b,n}(x)
+  =\sum_{i=1}^{n}a_i b^{n-i}-\sum_{i=1}^{n}a_i b^{i-1}.
+\end{equation}
+Set $m=\lfloor n/2\rfloor$.
+
+\begin{definition}[Ordered outer-gap spectrum]
+For $1\leq j\leq m$, define
+\[
+  \Delta_j=a_j-a_{n+1-j}.
+\]
+The spectrum map is $\Sigma_{b,n}(x)=(\Delta_1,\ldots,\Delta_m)$, with
+codomain
+\[
+  S_{b,n}=\{\Delta\in\Z^m:
+  b-1\geq\Delta_1\geq\cdots\geq\Delta_m\geq0\}.
+\]
+For $n=1$, $S_{b,1}$ contains the unique empty spectrum.
+\end{definition}
+
+Every actual spectrum lies in $S_{b,n}$.  The coordinate bounds are immediate,
+and for $j<m$,
+\[
+ \Delta_j-\Delta_{j+1}
+ =(a_j-a_{j+1})+(a_{n-j}-a_{n+1-j})\geq0.
+\]
+
+\begin{definition}[Linear reconstruction]
+For $1\leq j\leq m$, let
+\[
+  c_j=b^{n-j}-b^{j-1},
+  \qquad
+  \Lambda_{b,n}(\Delta)=\sum_{j=1}^{m}c_j\Delta_j.
+\]
+For $m=0$, the empty sum is zero.
+\end{definition}
+
+\begin{theorem}[Exact factorization]\label{thm:factorization}
+For every $x\in X_{b,n}$,
+\[
+  K_{b,n}(x)=\Lambda_{b,n}(\Sigma_{b,n}(x)).
+\]
+\end{theorem}
+
+\begin{proof}
+In \eqref{eq:kaprekar-map}, pair the term indexed by $j$ with the term indexed
+by $n+1-j$.  Their combined contribution is
+\[
+  (a_j-a_{n+1-j})(b^{n-j}-b^{j-1})=c_j\Delta_j.
+\]
+If $n$ is odd, the unpaired middle coefficient is zero.  Summing the $m$
+pairs proves the identity.
+\end{proof}
+
+\begin{lemma}[Spectrum surjectivity]\label{lem:surjectivity}
+The map $\Sigma_{b,n}:X_{b,n}\to S_{b,n}$ is surjective.
+\end{lemma}
+
+\begin{proof}
+For any $\Delta\in S_{b,n}$, use the sorted length-$n$ digit string
+\[
+  (\Delta_1,\ldots,\Delta_m,0,\ldots,0).
+\]
+Its outer differences are exactly $\Delta_1,\ldots,\Delta_m$.  When $n=1$,
+every raw digit has the unique empty spectrum.
+\end{proof}
+
+\begin{lemma}[Superincreasing coefficients]\label{lem:superincreasing}
+For every $1\leq j\leq m$,
+\[
+  c_j>(b-1)\sum_{k=j+1}^{m}c_k.
+\]
+\end{lemma}
+
+\begin{proof}
+Finite geometric summation gives
+\begin{align*}
+ c_j-(b-1)\sum_{k=j+1}^{m}c_k
+ &=b^{n-m}+b^m-b^j-b^{j-1}.
+\end{align*}
+Because $j\leq m$ and $n-m\geq m$,
+\[
+ b^j+b^{j-1}
+ \leq b^m+b^{m-1}
+ <2b^m
+ \leq b^{n-m}+b^m.
+\]
+The difference is therefore strictly positive.
+\end{proof}
+
+\begin{theorem}[Injectivity and exact image size]\label{thm:image}
+The map $\Lambda_{b,n}$ is injective on $S_{b,n}$, and
+\begin{equation}\label{eq:image-cardinality}
+  \left|\ImMap K_{b,n}\right|
+  =|S_{b,n}|
+  =\binom{m+b-1}{b-1}
+  =\binom{b+\lfloor n/2\rfloor-1}{\lfloor n/2\rfloor}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For distinct $\Delta,\Delta'$, let $j$ be their first differing coordinate and
+orient them so that $\Delta_j-\Delta'_j\geq1$.  Every later coordinate
+difference has magnitude at most $b-1$, so Lemma~\ref{lem:superincreasing}
+implies
+\[
+ \Lambda(\Delta)-\Lambda(\Delta')
+ \geq c_j-(b-1)\sum_{k>j}c_k>0.
+\]
+Thus $\Lambda$ is injective.  Theorem~\ref{thm:factorization} and
+Lemma~\ref{lem:surjectivity} give
+$\ImMap K=\Lambda(S_{b,n})$.
+
+To count spectra, let $q_r$ be the number of coordinates of $\Delta$ equal to
+$r$, for $r=0,\ldots,b-1$.  The weakly decreasing spectrum is uniquely
+determined by the weak composition
+\[
+ q_0+q_1+\cdots+q_{b-1}=m.
+\]
+Stars and bars gives $\binom{m+b-1}{b-1}$.  This argument also covers $m=0$,
+where there is one empty spectrum.
+\end{proof}
+
+\begin{corollary}[Fixed-base compression]\label{cor:compression}
+For fixed $b$,
+\[
+ |\ImMap K_{b,n}|
+ =\frac{m^{b-1}}{(b-1)!}+O(m^{b-2})
+ =\Theta(n^{b-1}),
+\]
+whereas $|X_{b,n}|=b^n$.  Hence the one-step image ratio tends to zero
+exponentially in $n$.
+\end{corollary}
+
+\begin{remark}
+The spectrum has tuple length $m$, but at fixed base it can be stored using the
+$b$ histogram counts $q_0,\ldots,q_{b-1}$ with one sum constraint.  It is
+therefore misleading to call $m$ an unqualified effective dimension.
+\end{remark}
+
+\section{Exact conjugacy and complete functional graphs}
+
+Write $\Sigma=\Sigma_{b,n}$, $\Lambda=\Lambda_{b,n}$, $K=K_{b,n}$, and define
+\[
+  R=\Sigma\circ\Lambda:S_{b,n}\to S_{b,n},
+  \qquad I=\ImMap K=\Lambda(S_{b,n}).
+\]
+
+\begin{theorem}[Post-first-step conjugacy]\label{thm:conjugacy}
+The map $\Lambda:S_{b,n}\to I$ is a bijection satisfying
+\[
+  K|_I\circ\Lambda=\Lambda\circ R.
+\]
+Consequently $K|_I$ and $R$ have corresponding cycles with identical least
+periods, and for every $x\in X_{b,n}$ and $t\geq1$,
+\begin{equation}\label{eq:iterate}
+  K^t(x)=\Lambda R^{t-1}\Sigma(x).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:image} makes $\Lambda$ a bijection onto $I$.  Direct
+composition gives
+\[
+ K\Lambda=\Lambda\Sigma\Lambda=\Lambda R.
+\]
+This is the conjugacy identity, and \eqref{eq:iterate} follows by induction.
+Bijective conjugacy preserves least periods.
+\end{proof}
+
+Semiconjugacy alone would not justify exact cycle correspondence; injectivity
+is the missing step.  Every raw orbit enters $I$ after one application of $K$.
+
+For a spectrum $\Delta$, define its raw fiber weight
+\[
+  w_{b,n}(\Delta)=|\Sigma^{-1}(\Delta)|.
+\]
+
+\begin{theorem}[Complete graph from a weighted reduced graph]
+\label{thm:full-graph}
+For every $\Delta\in S_{b,n}$,
+\[
+  \indeg_K(\Lambda\Delta)=w_{b,n}(\Delta).
+\]
+The entire functional graph of $K$ is recovered, up to the integer labels of
+anonymous leaves, by relabeling each reduced vertex $\Delta$ as
+$\Lambda\Delta$ and attaching exactly
+\[
+  w_{b,n}(\Delta)-\indeg_R(\Delta)
+\]
+additional indegree-zero source leaves to it.  Every state outside $I$ has
+indegree zero.
+\end{theorem}
+
+\begin{proof}
+Injectivity gives
+\[
+ K(x)=\Lambda\Delta
+ \iff \Lambda\Sigma(x)=\Lambda\Delta
+ \iff \Sigma(x)=\Delta.
+\]
+Thus the full indegree equals the fiber size.  A preimage already in $I$ has
+the form $\Lambda\Delta'$ and maps to $\Lambda\Delta$ exactly when
+$R(\Delta')=\Delta$.  These are the $\indeg_R(\Delta)$ reduced predecessors.
+All other preimages lie outside $I$; by definition of $I=\ImMap K$, such a
+state cannot itself have a predecessor.
+\end{proof}
+
+The theorem reconstructs graph structure and multiplicities.  Recovering the
+original integer label of every source leaf still requires enumerating or
+otherwise describing its spectrum fiber.
+
+\section{Exact fiber weights, basins, and information loss}
+
+Let $a=(a_1,\ldots,a_n)$ be a sorted digit multiset and let $c_d(a)$ count the
+occurrences of digit $d$.  The number of fixed-width strings represented by
+$a$ is
+\[
+  \operatorname{mult}(a)=\frac{n!}{\prod_{d=0}^{b-1}c_d(a)!}.
+\]
+Therefore
+\begin{equation}\label{eq:fiber-weight}
+ w_{b,n}(\Delta)
+ =\sum_{\substack{b-1\geq a_1\geq\cdots\geq a_n\geq0\\
+                   a_j-a_{n+1-j}=\Delta_j}}
+   \frac{n!}{\prod_{d=0}^{b-1}c_d(a)!}.
+\end{equation}
+
+\begin{theorem}[Exact raw basin weight]\label{thm:basin}
+Let $C$ be a cycle of $R$, and let
+\[
+  \Basin_R(C)=\{\Delta:R^t(\Delta)\in C\text{ for some }t\geq0\}.
+\]
+Then $\Lambda(C)$ is the corresponding full cycle and
+\[
+  |\Basin_K(\Lambda C)|
+  =\sum_{\Delta\in\Basin_R(C)}w_{b,n}(\Delta).
+\]
+\end{theorem}
+
+\begin{proof}
+The spectrum fibers partition $X_{b,n}$.  By
+Theorem~\ref{thm:conjugacy}, a raw state reaches $\Lambda(C)$ exactly when its
+spectrum reaches $C$.  Summing precisely those fiber sizes proves the formula.
+\end{proof}
+
+\begin{corollary}[Exact hitting-time histogram]\label{cor:hitting}
+If $\Delta\notin C$ has reduced distance $d_R(\Delta,C)$, every state in its
+fiber has raw hitting time $d_R(\Delta,C)+1$.  If $\Delta\in C$, exactly one
+state in its fiber is already on $\Lambda(C)$ and the remaining
+$w_{b,n}(\Delta)-1$ states enter the cycle in one step.
+\end{corollary}
+
+\begin{proof}
+For a noncycle spectrum, \eqref{eq:iterate} and injectivity show that first
+cycle entry occurs one step after its reduced entry.  For $\Delta\in C$, the
+cyclic permutation $R|_C$ has a unique predecessor $\gamma\in C$.  The state
+$\Lambda\gamma$ is the unique cycle member whose spectrum is $\Delta$; every
+other state in that fiber maps to $\Lambda\Delta$ in one step.
+\end{proof}
+
+There are $\binom{b+n-1}{b-1}$ sorted digit multisets.  For fixed $b$, this
+number and the reduced-state count are both $\Theta(n^{b-1})$.  Each transition,
+multinomial weight, and graph traversal uses arithmetic on integers with bit
+length polynomial in $n$.  Equations \eqref{eq:fiber-weight} and
+Theorem~\ref{thm:basin} therefore give a polynomial-time exact algorithm in the
+standard bit model for every fixed base, without enumerating all $b^n$ strings.
+
+\begin{theorem}[Entropy pushforward]\label{thm:entropy}
+Let $X$ have any distribution $\mu$ on $X_{b,n}$ and let
+$\nu=\Sigma_*\mu$.  For every $t\geq1$,
+\[
+ (K^t)_*\mu=\Lambda_*(R^{t-1})_*\nu,
+ \qquad
+ H(K^t(X))=H(R^{t-1}(\Sigma X)).
+\]
+Under a uniform raw input,
+\[
+ \Pr(\Sigma X=\Delta)=\frac{w_{b,n}(\Delta)}{b^n}
+\]
+and the exact one-step Shannon information loss is
+\begin{equation}\label{eq:entropy-loss}
+ H(X\mid K(X))
+ =\sum_{\Delta\in S_{b,n}}
+   \frac{w_{b,n}(\Delta)}{b^n}\log_2 w_{b,n}(\Delta).
+\end{equation}
+It obeys
+\[
+ H(X\mid K(X))
+ \geq n\log_2b-\log_2\binom{m+b-1}{b-1}.
+\]
+\end{theorem}
+
+\begin{proof}
+The pushforward identity is the random-variable form of
+\eqref{eq:iterate}.  The injective relabeling $\Lambda$ preserves atom
+probabilities and hence discrete entropy.  Under the uniform law, conditioning
+on $K(X)=\Lambda\Delta$ leaves a uniform choice among exactly
+$w_{b,n}(\Delta)$ raw states, proving \eqref{eq:entropy-loss}.  Finally,
+$K$ is deterministic, so $H(X\mid K(X))=n\log_2b-H(K(X))$, and entropy on a
+support of size $|\ImMap K|$ is at most the logarithm of that size.
+\end{proof}
+
+For fixed $b$, the support-based loss grows as
+\[
+ n\log_2b-(b-1)\log_2n+O(1).
+\]
+This is a concrete negative engineering consequence.  The map has a
+polynomial-size image and efficiently constructible collision fibers; it must
+not be represented as a cryptographic hash, entropy source, or reversible
+encoding.
+
+\section{Certified decimal dynamics}
+
+Table~\ref{tab:decimal-basins} reports exact raw basin sizes for decimal widths
+five through eight.  The domain is all $10^n$ fixed-width strings, including
+leading zeros.  Each width also has a ten-state repdigit basin leading to zero;
+that basin is omitted from the displayed nonzero rows.
+
+\begin{table}[ht]
+\centering
+\caption{Exact nonzero decimal attractor basins under the uniform raw law.}
+\label{tab:decimal-basins}
+\small
+\begin{tabular}{@{}rllr@{}}
+\toprule
+Width & Attractor & Raw basin size & Share \\
+\midrule
+5 & 2-cycle through 53955 & 3,190 & 3.190\% \\
+5 & 4-cycle through 63954 & 48,480 & 48.480\% \\
+5 & 4-cycle through 74943 & 48,320 & 48.320\% \\
+\addlinespace
+6 & fixed point 549945 & 1,950 & 0.195\% \\
+6 & fixed point 631764 & 62,520 & 6.252\% \\
+6 & 7-cycle through 851742 & 935,520 & 93.552\% \\
+\addlinespace
+7 & 8-cycle through 8429652 & 9,999,990 & 99.9999\% \\
+\addlinespace
+8 & fixed point 63317664 & 599,536 & 0.599536\% \\
+8 & fixed point 97508421 & 2,371,040 & 2.371040\% \\
+8 & 3-cycle through 86526432 & 48,247,316 & 48.247316\% \\
+8 & 7-cycle through 86326632 & 48,782,098 & 48.782098\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Thus, at width five the two four-cycles absorb 96.8\% of all raw inputs; at
+width six a seven-cycle absorbs 93.552\%; at width seven the nonzero
+eight-cycle absorbs 99.9999\%; and at width eight the three- and seven-cycles
+together absorb about 97.03\%.  A fixed-point-only summary therefore misses
+the dominant observed behavior at these widths.  This does not contradict the
+special global role of 6174: among the decimal fixed-width strings of width
+four, the ten repdigits enter zero and the other 9,990 states reach 6174 in at
+most seven steps.
+
+The table is a finite certified computation, not a universal theorem.  The
+ordered transition and weight data are stored in
+\path{results/decimal_dynamics.json}; an independent oracle recomputes the
+cycles, weights, basin sizes, and hitting-time histograms before comparison.
+
+\FloatBarrier
+\section{Normalized adjacent gaps for sorted logits}
+
+Let a vocabulary logit vector have size $V$, select its top $k\geq2$ order
+statistics, and write
+\[
+  s_1\geq s_2\geq\cdots\geq s_k.
+\]
+Assume first that $D=s_1-s_k>0$ and define normalized adjacent gaps
+\begin{equation}\label{eq:logit-gaps}
+  u_j=\frac{s_j-s_{j+1}}{D},
+  \qquad j=1,\ldots,k-1.
+\end{equation}
+These coordinates were called the Kaprekar gap simplex in the original
+proposal.  Mathematically, they are normalized spacings of sorted logits.
+
+\begin{theorem}[Exact information content]\label{thm:logit-reconstruction}
+The vector $u$ lies in
+\[
+  \left\{u\in\R_{\geq0}^{k-1}:\sum_{j=1}^{k-1}u_j=1\right\},
+\]
+a simplex of affine dimension $k-2$, and
+\begin{equation}\label{eq:logit-reconstruction}
+  s_i-s_k=D\sum_{j=i}^{k-1}u_j.
+\end{equation}
+Consequently, $u$ is a bijective coordinate for sorted top-$k$ spectra modulo
+positive scaling and translation; $(D,u)$ is a bijective coordinate modulo
+translation and exactly determines the top-$k$-conditional softmax law.
+\end{theorem}
+
+\begin{proof}
+Nonnegativity follows from sorting.  Telescoping gives
+\[
+ \sum_{j=1}^{k-1}u_j
+ =\frac{s_1-s_k}{D}=1,
+ \qquad
+ D\sum_{j=i}^{k-1}u_j=s_i-s_k.
+\]
+The reconstruction formula proves the stated bijections.  Softmax restricted
+and renormalized to the top $k$ depends only on relative logits.
+\end{proof}
+
+The exact connection with the digit construction is the shared interval-sum
+operator.  For the applicable ranges of $j$,
+\[
+ a_j-a_{n+1-j}=\sum_{i=j}^{n-j}(a_i-a_{i+1}),
+ \qquad
+ s_j-s_{k+1-j}=D\sum_{i=j}^{k-j}u_i.
+\]
+No stronger transfer theorem between the two application domains is claimed.
+
+Define the translation-quotiented vector
+\[
+  r(s)=(s_1-s_k,\ldots,s_{k-1}-s_k,0).
+\]
+
+\begin{corollary}[No information creation]\label{cor:no-information}
+The observations $r(s)$ and $(D,u)$ are bijectively related and therefore have
+identical Bayes-optimal risk for every target and loss.  Since $(D,u)$ is a
+deterministic function of the unrestricted sorted vector $s$, the latter can
+have lower Bayes risk.  Equality for every decision problem is guaranteed, for
+example, by $Y\perp s_k\mid r(s)$.
+\end{corollary}
+
+A varying common offset can predict $Y$ while leaving $(D,u)$ unchanged.  An
+information-matched benchmark must therefore compare a same-capacity model on
+relative sorted logits.  Any gain over that comparator can arise only from
+finite-sample inductive bias, regularization, numerical conditioning, or a
+capacity constraint, not from additional information.
+
+\subsection{Degeneracy, sensitivity, and the top-k choice}
+
+\begin{proposition}[Flat-spectrum singularity]
+For $k\geq3$, the map in \eqref{eq:logit-gaps} has no continuous extension to
+$D=0$.
+\end{proposition}
+
+\begin{proof}
+Choose distinct simplex points $u\neq v$.  Reconstruct two sorted spectra with
+bottom logit zero and spread $\varepsilon$.  Both approach the same all-zero
+vector as $\varepsilon\downarrow0$, while their normalized coordinates remain
+$u$ and $v$.  A continuous extension would assign two limits to the same
+point.
+\end{proof}
+
+For $k=2$, $u=(1)$ whenever $D>0$, so it contains no shape information.
+Implementations should expose a flat-spectrum flag rather than silently divide
+by an epsilon and report an ordinary simplex point.
+
+\begin{proposition}[Near-flat sensitivity]\label{prop:sensitivity}
+Let sorted spectra $s,t$ have spreads $D_s,D_t\geq d>0$ and satisfy
+$\|s-t\|_\infty\leq\varepsilon$.  Then
+\[
+  \|u(s)-u(t)\|_\infty\leq\frac{4\varepsilon}{d}.
+\]
+\end{proposition}
+
+\begin{proof}
+Each adjacent gap changes by at most $2\varepsilon$, and the spread changes by
+at most $2\varepsilon$.  For corresponding gaps $0\leq g'\leq D_t$,
+\[
+ \left|\frac{g}{D_s}-\frac{g'}{D_t}\right|
+ \leq\frac{|g-g'|}{D_s}
+ +\frac{g'|D_t-D_s|}{D_sD_t}
+ \leq\frac{4\varepsilon}{d}.
+\]
+\end{proof}
+
+The $1/d$ factor captures unavoidable ill-conditioning near the flat stratum.
+Top-$k$ token membership has an additional discontinuity at cutoff ties.
+
+\begin{proposition}[Exact change of $k$]
+If a nondegenerate top-$k$ spectrum is extended by $s_{k+1}\leq s_k$ and
+$D'=s_1-s_{k+1}$, then
+\[
+  u'_j=\frac{D}{D'}u_j\quad(1\leq j<k),
+  \qquad
+  u'_k=\frac{s_k-s_{k+1}}{D'}.
+\]
+\end{proposition}
+
+Thus changing $k$ rescales every existing coordinate.  Any experiment must
+predeclare $k$, sweep it, or use an explicitly multiscale representation.
+
+\subsection{Sharp omitted-tail bounds}
+
+Set
+\[
+ r_i=s_i-s_k=D\sum_{j=i}^{k-1}u_j,
+ \qquad
+ A=\sum_{i=1}^{k}e^{r_i}.
+\]
+For omitted logits $z_\ell\leq s_k$, define their partition mass relative to
+$e^{s_k}$ by
+\[
+  T=\sum_{\ell>k}e^{z_\ell-s_k}.
+\]
+
+\begin{theorem}[Tail bounds]\label{thm:tail-bounds}
+For vocabulary size $V\geq k$,
+\[
+ 0\leq T\leq V-k,
+ \qquad
+ M_k=\frac{A}{A+T},
+ \qquad
+ p_1=\frac{e^D}{A+T},
+\]
+where $M_k$ is the full-softmax top-$k$ mass and $p_1$ is the full-softmax
+top-token probability.  Therefore
+\[
+ \frac{A}{A+V-k}\leq M_k\leq1,
+ \qquad
+ \frac{e^D}{A+V-k}\leq p_1\leq\frac{e^D}{A}.
+\]
+The lower bounds are attained when every omitted logit equals $s_k$.  If
+$V=k$, then $T=0$ and $(D,u)$ determines the complete softmax distribution.
+If $V>k$ and all logits are finite, the upper bounds are strict but sharp
+suprema as omitted logits tend to minus infinity.
+\end{theorem}
+
+\begin{proof}
+Each of the $V-k$ tail summands is at most one and nonnegative.  The formulas
+follow by dividing the full partition by $e^{s_k}$.  Both $M_k$ and $p_1$ are
+decreasing functions of $T$, proving the bounds and equality conditions.
+\end{proof}
+
+When $V>k$, identical $(D,u)$ values can have different tail mass, full
+entropy, and unconditional top-token probability.  For example, give one tail
+token relative weight $t\in(0,1]$.  If $P$ is the top-$k$-conditional law and
+$q=t/(A+t)$, the resulting entropy approaches
+\[
+  h_2(q)+(1-q)H(P),
+\]
+which is nonconstant in $q$.  Recording the additional statistic
+\[
+ \tau=\operatorname{logsumexp}(z_{\mathrm{tail}})-s_k
+\]
+determines $T=e^\tau$ and all top-$k$ full-softmax probabilities.  For an empty
+tail, the consistent convention is $\tau=-\infty$.
+
+\begin{corollary}[Exact rank ratio]\label{cor:rank-ratio}
+For $1\leq r\leq k$,
+\[
+  \frac{p_r}{p_1}
+  =\exp\left(-D\sum_{j=1}^{r-1}u_j\right).
+\]
+\end{corollary}
+
+This identity is local to one target distribution.  It is neither a semantic
+correctness guarantee nor a speculative-acceptance certificate.
+
+\subsection{Distribution-free correctness is impossible}
+
+\begin{proposition}[No universal logit-only calibrator]\label{prop:no-free-lunch}
+Fix any measurable proposed correctness probability
+$q:\R^V\to[0,1]$.  There exist two joint laws with the same deterministic
+logit vector $Z=z_0$, but with correctness $Y=1$ almost surely under one law
+and $Y=0$ almost surely under the other.  Consequently
+\[
+ \max\{\operatorname{Brier}_P(q),\operatorname{Brier}_Q(q)\}
+ =\max\{(1-q(z_0))^2,q(z_0)^2\}\geq\frac14.
+\]
+\end{proposition}
+
+\begin{proof}
+The observation, and hence $q(Z)$, is identical in both laws, while their
+conditional correctness probabilities are zero and one.  Either
+$q(z_0)\geq1/2$ or $1-q(z_0)\geq1/2$, which yields the Brier bound.
+\end{proof}
+
+This rules out distribution-free calibration without assumptions or labeled
+calibration.  It does not prove that logits are insufficient within one fixed
+process, and the same adversarial construction applies to any fixed hybrid
+observable.  Whether internal states, semantic features, or gap coordinates
+help is an empirical question.
+
+\section{Exact and relaxed speculative verification}
+
+Let a draft distribution $q$ propose a token $X$, let $a(x)\in[0,1]$ be its
+acceptance probability, and after rejection draw a replacement from $h$.  Set
+\[
+  r=1-\sum_xq(x)a(x).
+\]
+
+\begin{theorem}[Acceptance/residual decomposition]\label{thm:residual}
+The final output follows target distribution $p$ if and only if
+\begin{equation}\label{eq:residual-condition}
+  q(x)a(x)+r h(x)=p(x)
+  \quad\text{for every }x.
+\end{equation}
+When $r>0$, such an $h$ exists exactly when $q(x)a(x)\leq p(x)$ for every $x$,
+and then
+\[
+  h(x)=\frac{p(x)-q(x)a(x)}{r}.
+\]
+When $r=0$, exactness holds exactly when $q(x)a(x)=p(x)$ for every $x$,
+equivalently $q=p$ with full acceptance on the support of $q$; acceptance at
+$q$-null points is immaterial.
+\end{theorem}
+
+\begin{proof}
+Equation \eqref{eq:residual-condition} is the law of total probability over
+acceptance and rejection.  For $r>0$, solving for $h$ gives the formula.
+Nonnegativity is equivalent to $qa\leq p$, and the numerator sums to $r$, so
+$h$ is normalized.  If $r=0$, the residual term vanishes, giving the stated
+componentwise condition.
+\end{proof}
+
+For $q(x)>0$, the standard maximal choice
+\[
+  a(x)=\min\{1,p(x)/q(x)\}
+\]
+has accepted mass $\min\{p(x),q(x)\}$.  It maximizes the total acceptance
+probability because exactness requires $qa\leq p$ and $a\leq1$ gives
+$qa\leq q$.  Hence
+\begin{equation}\label{eq:max-acceptance}
+  A_{\max}=\sum_x\min\{p(x),q(x)\}=1-\TV(p,q).
+\end{equation}
+
+Conditional on acceptance, when the acceptance probability is nonzero,
+\[
+ \Pr(X=x\mid\text{accepted})
+ =\frac{q(x)a(x)}{\sum_yq(y)a(y)}.
+\]
+This conditional law need not itself equal $p$; the residual completes the
+target distribution.
+
+Now suppose a target-only gate accepts a proposed token of target rank
+$r\leq k$ when
+\[
+  \frac{s_1-s_r}{D}\leq\rho.
+\]
+Corollary~\ref{cor:rank-ratio} gives the transparent identity
+\[
+  \frac{p_r}{p_1}=e^{s_r-s_1}\geq e^{-\rho D}.
+\]
+This gate omits the proposal distribution $q$ and generally fails
+\eqref{eq:residual-condition}.  A normalized threshold also permits an
+arbitrarily small ratio as $D$ grows.  Adding an absolute cap
+\[
+  s_1-s_r\leq\varepsilon
+\]
+ensures $p_r/p_1\geq e^{-\varepsilon}$, but still does not make the rule exact.
+Lossless uses of the geometry may change draft length or verification effort
+while retaining the standard $p/q$ accept-and-correct mechanism.
+
+This distinction separates three objectives: exact sampling preserves $p$;
+relaxed verification intentionally changes the distribution and must measure
+that change; semantic or judge-based decoding optimizes a different downstream
+criterion.  Margin-aware relaxed verification and stronger acceptance
+certificates already exist \cite{song2026mars,sharma2026}; the elementary ratio
+identity above does not supersede them.
+
+\section{A conditional selective-risk guarantee}
+
+The coordinates do not supply calibration by themselves.  One limited but
+exact wrapper can be stated under explicit sampling assumptions.  Let
+$(S_i,E_i)_{i=1}^{N}$ be IID score/error pairs from the deployment law, fix a
+finite threshold grid $\mathcal{T}$ before observing them, and define
+\[
+  r_t=\Pr(E=1\mid S\geq t).
+\]
+
+\begin{proposition}[Simultaneous binomial risk bounds]
+For every threshold meeting a predeclared minimum accepted count, compute a
+one-sided Clopper--Pearson upper bound at level
+$\alpha/|\mathcal{T}|$ \cite{clopper1934}.  With probability at least
+$1-\alpha$, every reported bound simultaneously covers its corresponding
+$r_t$.  On that event, any threshold selected because its bound is at most a
+target risk $\rho$ satisfies $r_t\leq\rho$.
+\end{proposition}
+
+\begin{proof}
+Conditional on the number accepted at one fixed threshold, accepted errors
+are Bernoulli with parameter $r_t$.  The exact one-sided bound fails with
+probability at most $\alpha/|\mathcal{T}|$.  A union bound over the predeclared
+grid gives simultaneous coverage; selection among simultaneously valid bounds
+preserves the statement.
+\end{proof}
+
+The assumptions are substantive.  Calibration-set reuse, adaptive threshold
+search outside the fixed grid, dependence, and arbitrary distribution shift
+are not covered.  More specialized conformal reasoning methods make different
+assumptions and targets \cite{zhou2026orca}; saying only ``wrap the score with
+conformal prediction'' is not a complete method specification.
+
+\section{Independent computational and formal evidence}
+
+The universal claims above rest on proofs.  Computation supplies independent
+implementation evidence and exact finite-instance certificates.
+
+\subsection{Independent exhaustive certificate}
+
+The checker in \path{proofs/independent_oracle.py} does not import the
+production \path{kaprekar} package.  It uses separate integer-arithmetic
+implementations and exhaustively covers
+\[
+  2\leq b\leq8,
+  \qquad 1\leq n\leq7.
+\]
+Across these 49 systems it checks 3,816,497 raw states and 973 spectra.  Each
+case evaluates 18 obligations, including factorization, spectrum
+surjectivity, coefficient slack, injectivity, image equality and cardinality,
+multiset/fiber agreement, graph indegrees, leaf counts, conjugacy, basin
+partition, and hitting-time partition.  Ordered raw transitions, reduced
+graphs, and weights are committed by SHA-256 digests.
+
+The machine-readable artifact is
+\path{results/independent_proof_certificate.json}.  Its logical certificate
+digest is
+\begin{center}
+\small\ttfamily
+0aa747402f00b6901b9f11111f3dfe6066466b3425aadd455803c6373e09af75.
+\end{center}
+The certificate proves its declared finite grid, not all bases and widths.
+
+\subsection{Formalization scope}
+
+The pinned Lean project in \path{proofs/lean/} mechanizes the universal
+even/odd pairing identities, the outer-gap factorization, and the cardinality
+of an order-free gap multiset type.  It does not yet mechanize the complete
+equivalence with weakly decreasing spectra, the injectivity-to-image bridge,
+weighted graph reconstruction, logit theorems, or speculative residual
+theorem.  The paper therefore describes the result as partially formalized,
+not fully machine-checked.  The independent Lean artifact accompanying the
+odd-base four-digit classification \cite{chenkaprekar2026} is separate prior
+work.
+
+\begin{table}[ht]
+\centering
+\caption{Evidence status of the principal claims.}
+\label{tab:evidence}
+\small
+\begin{tabular}{@{}p{0.54\linewidth}p{0.38\linewidth}@{}}
+\toprule
+Claim & Strongest evidence \\
+\midrule
+Factorization, injectivity, image count & Universal proof; factorization partially formalized \\
+Conjugacy, full graph, weighted basins, entropy & Universal proof; independent finite stress test \\
+Decimal cycle identities and basin sizes & Exact finite certificate \\
+Odd-base four-digit projective doubling & External theorem and external Lean artifact \\
+Logit reconstruction, limits, and rank ratios & Universal proof/identity \\
+Speculative target preservation condition & Universal proof \\
+KGS improves correctness, calibration, or speed & Unproved empirical hypothesis \\
+Production, educational, or cryptographic impact & Not established; cryptographic use contraindicated \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Empirical protocol and falsifiable hypotheses}
+
+Although no LLM experiment is reported, the theory determines what a valid
+future test must control.  At minimum, a preregistered benchmark should include:
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+  \item a same-capacity model on relative sorted top-$k$ logits, plus an
+        unrestricted sorted-logit offset control;
+  \item $u$-only, $D$-only, $(D,u)$, token-identity, and tail-log-mass ablations;
+  \item maximum probability, entropy, raw margin, conditional top-$k$ entropy,
+        semantic and hidden-state methods, and hybrid baselines;
+  \item several predeclared values of $k$, temperature rescaling, and
+        within-domain, cross-domain, cross-model, and prompt shifts;
+  \item question- or sequence-disjoint train, calibration, and untouched test
+        splits; and
+  \item AUROC, AUPRC, Brier score, negative log-likelihood, full risk--coverage
+        curves, AURC, paired uncertainty intervals, latency, and memory.
+\end{itemize}
+
+For approximate speculative decoding, exact and relaxed methods must appear in
+separate tables.  Throughput must be compared at matched downstream quality or
+declared divergence, not at an unmatched acceptance rate.
+
+The only empirical hypotheses retained are:
+\begin{description}[leftmargin=2.2em,style=nextline,itemsep=3pt]
+  \item[H1.] Normalized gap coordinates may provide a useful finite-sample
+  inductive bias in regimes where local sorted-logit shape matters, but should
+  not outperform an information-matched comparator merely by containing more
+  information.
+  \item[H2.] Adding identities, tails, semantic features, or internal probes
+  may improve shift robustness; Proposition~\ref{prop:no-free-lunch} does not
+  prove that any such hybrid will succeed.
+  \item[H3.] Gap diagnostics may help allocate exact verification effort or
+  draft length.  Any distribution-changing margin rule must be evaluated
+  against MARS and exact speculative sampling.
+\end{description}
+
+These hypotheses are falsifiable and are not promoted to conclusions in this
+paper.
+
+\section{Limitations and consequences}
+
+\paragraph{Prior-art limitation.}
+Outer-difference dependence is classical \cite{prichett1981}.  The contribution
+is the explicit injective code and its graph-theoretic consequences, not the
+original discovery of the coordinate idea.
+
+\paragraph{Finite versus universal evidence.}
+The exhaustive certificate covers exactly its stated grid.  Decimal basin
+shares are finite fixed-width results and change if the input law or
+leading-zero policy changes.  The universal claims depend on the displayed
+proofs; only a subset is currently formalized in Lean.
+
+\paragraph{Representation loss.}
+Sorting drops token identity, top-$k$ truncation drops tail detail, and
+normalization drops scale unless $D$ is retained.  Even $(D,u)$ drops the
+common offset, which can matter outside shift-invariant observation models.
+The representation becomes ill-conditioned near flat spectra and changes
+with $k$.
+
+\paragraph{No empirical LLM result.}
+There are no real-model logits, correctness labels, distribution shifts,
+latency measurements, or human evaluations in this work.  No state-of-the-art,
+production-safety, speedup, or educational-impact claim is supported.
+
+\paragraph{Operational consequences.}
+For finite-dynamics research, the reduction replaces exponential raw
+enumeration with an exact polynomial fixed-base graph and preserves raw basin
+weights.  For security, the same collapse is a warning against using the map
+as a hash or entropy mechanism.  For LLM decision systems, false acceptance
+can expose users to incorrect answers while false rejection adds cost and
+withholds useful answers; both must be measured at a declared risk--coverage
+point.  For speculative decoding, a target-only margin can be useful as a
+diagnostic but cannot silently be relabeled exact sampling.
+
+\section{Conclusion}
+
+The durable mathematical object behind 6174 is an ordered-gap law.  Its
+explicit linear reconstruction is superincreasing, which yields an exact
+one-step image count and a conjugacy between the post-first-step dynamics and
+a polynomial-size reduced graph at fixed base.  Fiber weights then recover the
+complete functional graph, raw basins, depth histograms, and entropy evolution.
+Exact decimal computations demonstrate why cycles, not only fixed points, are
+essential to the real dynamics.
+
+Normalized adjacent gaps also provide a precise coordinate system for sorted
+top-$k$ logits.  Their value is representational and diagnostic: they separate
+spread from relative shape and expose exact rank ratios.  Their limitations
+are equally exact: they add no information relative to relative sorted logits,
+are singular at flat spectra, omit tail detail, and cannot universally
+calibrate correctness.  Likewise, target-only margin acceptance is not a
+substitute for the accept-and-residual condition required to preserve a target
+distribution.  This combination of positive structure and negative limits is
+the paper's intended practical contribution.
+
+\section*{Acknowledgments}
+
+The author acknowledges the maintainers of Python, Lean, mathlib, and the
+open scholarly archives used to make the computational and literature audit
+reproducible.  The author alone is responsible for the claims and any errors.
+
+\section*{Code and data availability}
+
+Source code, tests, Lean files, machine-readable result artifacts, and the
+arXiv source package are available at
+\url{https://github.com/thewisecrab/kaprekar-geometry}.  The repository contains
+no human-subject or proprietary dataset.  The original compiled manuscript is
+preserved separately from this major revision, and exact artifact and
+source-tree digests are recorded in \path{results/manifest.json}.  The absence
+of an empirical LLM dataset is intentional and is a limitation, not missing
+evidence for a performance claim.
+
+\bibliographystyle{plain}
+\begingroup
+\raggedright
+\bibliography{references}
+\endgroup
+
+\end{document}

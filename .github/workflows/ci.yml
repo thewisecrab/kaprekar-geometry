@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  formal-proof:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        with:
+          persist-credentials: false
+      - name: Elaborate and independently check Lean proofs
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
+        with:
+          lake-package-directory: proofs/lean
+          auto-config: false
+          build: true
+          test: false
+          lint: false
+          use-mathlib-cache: true
+          leanchecker: true
+          nanoda: true
+          nanoda-allow-sorry: false
+
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install benchmark-enabled package
+        run: python -m pip install -e '.[benchmark]'
+      - name: Run fast suite
+        run: python -m unittest discover -s tests -v
+
+  release-gate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install benchmark-enabled package
+        run: python -m pip install -e '.[benchmark]'
+      - name: Run exhaustive release gate
+        run: python scripts/release_check.py
+      - name: Verify committed evidence is current
+        run: python scripts/reproduce.py --check
+      - name: Build wheel
+        run: python -m pip wheel . --no-deps --wheel-dir dist
+      - name: Verify clean wheel install
+        run: |
+          python -m venv /tmp/kaprekar-wheel-check
+          /tmp/kaprekar-wheel-check/bin/pip install --no-deps dist/*.whl
+          /tmp/kaprekar-wheel-check/bin/kaprekar verify \
+            --base-min 10 --base-max 10 \
+            --digits-min 4 --digits-max 4 \
+            --mode reduced

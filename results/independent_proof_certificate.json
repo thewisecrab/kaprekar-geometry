@@ -1,0 +1,3877 @@
+{
+  "cases": [
+    {
+      "base": 2,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "af286240b2fba660c266dbac7a47ca05a8b096c8558d13c7210568c74caf7ea5",
+        "raw_weights_sha256": "be34ad10e753d5f230dfc0178471b3dd65eb7bd71a3e9fd70d2045b566522801",
+        "reduced_graph_sha256": "33ae05a4232442cf1692691d795c3802cacdc1d12f2a0f0f228b89478b6f61e5"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 2,
+          "spectrum_cycle": [
+            []
+          ]
+        }
+      ],
+      "digits": 1,
+      "minimum_superincreasing_slack": null,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 1,
+        "1": 1
+      },
+      "raw_states_checked": 2,
+      "spectrum_states_checked": 1
+    },
+    {
+      "base": 2,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "abdece3f54e37b6290bb937efe1782deaa2db15a2459f17bc347a70caf763d71",
+        "raw_weights_sha256": "34a4f1776158161e89f3a5b8123cc22b66eaa48dbecdc52e701c9b5dc9998505",
+        "reduced_graph_sha256": "4b9e4cc716fc7fa409966f36885ee5e3584eb41440a11107dd0beb344c3389d7"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 2,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            1
+          ],
+          "raw_basin_size": 2,
+          "spectrum_cycle": [
+            [
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 2,
+      "minimum_superincreasing_slack": 1,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 2,
+        "1": 2
+      },
+      "raw_states_checked": 4,
+      "spectrum_states_checked": 2
+    },
+    {
+      "base": 2,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "9474c381ad3ae173094dcd145c7289166a8d6e5aafaebfd97ae394468e4a7cb0",
+        "raw_weights_sha256": "2e9fde81f5e1b6197137e7b397437b0f191803bb499bd65937d43c8d38177ad5",
+        "reduced_graph_sha256": "81aeeb3d2b0afacefba223dfa73faca93eccba134860a32cc5bf67f1deea6fa6"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 2,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            3
+          ],
+          "raw_basin_size": 6,
+          "spectrum_cycle": [
+            [
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 3,
+      "minimum_superincreasing_slack": 3,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 2,
+        "1": 6
+      },
+      "raw_states_checked": 8,
+      "spectrum_states_checked": 2
+    },
+    {
+      "base": 2,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "4499647083fbd52668ccf3d3a0519ac72e36a7569fd01353b1a74362b34d6b40",
+        "raw_weights_sha256": "a2f597aea310b27ac5420b93f8501ce7f8874de1140b0a8166b495b469ccb5f0",
+        "reduced_graph_sha256": "48c7268b1e456fdb3edd3f3adef79a0adeb1688302525e4b0d76f43d2b27fabd"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 2,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            7
+          ],
+          "raw_basin_size": 8,
+          "spectrum_cycle": [
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            9
+          ],
+          "raw_basin_size": 6,
+          "spectrum_cycle": [
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 4,
+      "minimum_superincreasing_slack": 2,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 3,
+        "1": 13
+      },
+      "raw_states_checked": 16,
+      "spectrum_states_checked": 3
+    },
+    {
+      "base": 2,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "12ae16353e6c39743e3266f515f4ca67b341d82d6b41c2d4f782385c8f9843a2",
+        "raw_weights_sha256": "e4f25822a518e99ca142f4dae25868f444972f9545eaab244b29e9afd5ee8d9e",
+        "reduced_graph_sha256": "5ac6de2579006cef85eeb1a18772c804f09ad3ae671cd25e76ca9d4b54068ad8"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 2,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            15
+          ],
+          "raw_basin_size": 10,
+          "spectrum_cycle": [
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            21
+          ],
+          "raw_basin_size": 20,
+          "spectrum_cycle": [
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 5,
+      "minimum_superincreasing_slack": 6,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 3,
+        "1": 29
+      },
+      "raw_states_checked": 32,
+      "spectrum_states_checked": 3
+    },
+    {
+      "base": 2,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "144cd7a0d34704ee94989ab92e5226aa653361e2c0cc77bef169a35f3e8309a5",
+        "raw_weights_sha256": "6889221955bbed95d20f93f4b61f86b2496a188070e1546badb8916329e6f7c6",
+        "reduced_graph_sha256": "82c117c2dd68280257bf5c955f5a7bf856f2e22c0babc6ee40ffa376a2645bcc"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 2,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            31
+          ],
+          "raw_basin_size": 12,
+          "spectrum_cycle": [
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            45
+          ],
+          "raw_basin_size": 30,
+          "spectrum_cycle": [
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            49
+          ],
+          "raw_basin_size": 20,
+          "spectrum_cycle": [
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 6,
+      "minimum_superincreasing_slack": 4,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 4,
+        "1": 60
+      },
+      "raw_states_checked": 64,
+      "spectrum_states_checked": 4
+    },
+    {
+      "base": 2,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "86667731901486da7d4b07139fe459246549b554e02139b61ab45689c6a9589d",
+        "raw_weights_sha256": "125946f30bdcc0595999520ebb241b194293fd672199072cfb9f9597d223386a",
+        "reduced_graph_sha256": "e975852521700a94c2ced0a4b10fc5daa2eb975836c66c53d422a2d299e2eebd"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 2,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            63
+          ],
+          "raw_basin_size": 14,
+          "spectrum_cycle": [
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            93
+          ],
+          "raw_basin_size": 42,
+          "spectrum_cycle": [
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            105
+          ],
+          "raw_basin_size": 70,
+          "spectrum_cycle": [
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 7,
+      "minimum_superincreasing_slack": 12,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 4,
+        "1": 124
+      },
+      "raw_states_checked": 128,
+      "spectrum_states_checked": 4
+    },
+    {
+      "base": 3,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "fdcd22f30a66a7d5b55c0a50ab8ed3f834d704ec8ffcd60596185da24cdd6ab6",
+        "raw_weights_sha256": "93f63e5b6becba816d4af2b9746d3de5d60a645b53e02d0059a20db7b96cedc4",
+        "reduced_graph_sha256": "cf157c50485c10a130b28a6cc70b27cc29eae7cccfe18f2bc97dee21c0a9f662"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 3,
+          "spectrum_cycle": [
+            []
+          ]
+        }
+      ],
+      "digits": 1,
+      "minimum_superincreasing_slack": null,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 1,
+        "1": 2
+      },
+      "raw_states_checked": 3,
+      "spectrum_states_checked": 1
+    },
+    {
+      "base": 3,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "0ad4e857b99bafb5f228e6b18eca9b486eea98156d0af1f0a8de4f5c98eed855",
+        "raw_weights_sha256": "6a243b14c10bfa3baecaee1a31f6533d4bfa282a3447d699eb4919efe315e5a8",
+        "reduced_graph_sha256": "47d7ccad9ee127c2191ad9e330da04322810571c80fbfb6c600f34550c3926dd"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 2,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 9,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        }
+      ],
+      "digits": 2,
+      "minimum_superincreasing_slack": 2,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 1,
+        "1": 2,
+        "2": 2,
+        "3": 4
+      },
+      "raw_states_checked": 9,
+      "spectrum_states_checked": 3
+    },
+    {
+      "base": 3,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "dce11fc9818ff4841f2f429fb47d3024b2560e1a0f2a07a069a6ec5db71f974f",
+        "raw_weights_sha256": "77a2d2bd95c299ddefee137fe36c97df6ebc207af84baff8ba331a238ae0f1d2",
+        "reduced_graph_sha256": "fdfd5060ea0ce58d42567920f298f7bfee90486eb3ab9dc790b411eb2f45e2ce"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 3,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            8,
+            16
+          ],
+          "raw_basin_size": 24,
+          "spectrum_cycle": [
+            [
+              1
+            ],
+            [
+              2
+            ]
+          ]
+        }
+      ],
+      "digits": 3,
+      "minimum_superincreasing_slack": 8,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 3,
+        "1": 24
+      },
+      "raw_states_checked": 27,
+      "spectrum_states_checked": 3
+    },
+    {
+      "base": 3,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "77f3948cf13b313b49d5133e0719641da216acc597506af5a8e3f9bc369eaf5a",
+        "raw_weights_sha256": "7dd540bde69f3e73d2f31662a813e5aa995d33c3f9bfd06c13f3d8ea296ce3b1",
+        "reduced_graph_sha256": "0e90cd37b138e50275faa063dcabf971b28dcbe1422f11d5c757f8c2f3da9399"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 3,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 1,
+          "numeric_cycle": [
+            32,
+            52
+          ],
+          "raw_basin_size": 78,
+          "spectrum_cycle": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "digits": 4,
+      "minimum_superincreasing_slack": 6,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 3,
+        "1": 32,
+        "2": 46
+      },
+      "raw_states_checked": 81,
+      "spectrum_states_checked": 6
+    },
+    {
+      "base": 3,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "bb8a0ca6268b9d1d3b736c13799e5252609819645e20c7e9e9220af94a6e172c",
+        "raw_weights_sha256": "4f0f1cb8efecae480edf26246a5a512424ef36ed49df541d73aacbac58f5fa8b",
+        "reduced_graph_sha256": "9e6a9f5f1fde4c8b680bb3aff056ae21881806c69be1e8d19aa4a3aed7d9888f"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 3,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 3,
+          "numeric_cycle": [
+            184
+          ],
+          "raw_basin_size": 240,
+          "spectrum_cycle": [
+            [
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 5,
+      "minimum_superincreasing_slack": 24,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 2,
+        "1": 101,
+        "2": 90,
+        "3": 30,
+        "4": 20
+      },
+      "raw_states_checked": 243,
+      "spectrum_states_checked": 6
+    },
+    {
+      "base": 3,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "1558c174a1349c4c6c99720828bff7bb90333030f1ac4a0b3af0532a9c52205f",
+        "raw_weights_sha256": "88aff7f0a4f5842419b5564fca722cab0b4499b487cdaa851b00ea92f93a8d78",
+        "reduced_graph_sha256": "4587fdf71f96ae1828eca2bf0851f1354374568f7b4b3c59b363891c483f4512"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 3,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 2,
+          "numeric_cycle": [
+            320,
+            580,
+            484
+          ],
+          "raw_basin_size": 726,
+          "spectrum_cycle": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "digits": 6,
+      "minimum_superincreasing_slack": 18,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 4,
+        "1": 221,
+        "2": 364,
+        "3": 140
+      },
+      "raw_states_checked": 729,
+      "spectrum_states_checked": 10
+    },
+    {
+      "base": 3,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "d18505d2f368eab897cf52493b509b4a763ea9e9756b0a699b613810615d7323",
+        "raw_weights_sha256": "fa5faf6b8d5657434a1ea564b21fd43375b9aeffd9561da2ba60f23495cb75be",
+        "reduced_graph_sha256": "ecf04769a51acd7ce1f5b2dc0e2c3f4a1140c192a53cb7c21942f77418baefe5"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 3,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 3,
+          "numeric_cycle": [
+            1696,
+            1768
+          ],
+          "raw_basin_size": 1344,
+          "spectrum_cycle": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 1,
+          "numeric_cycle": [
+            2008
+          ],
+          "raw_basin_size": 840,
+          "spectrum_cycle": [
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 7,
+      "minimum_superincreasing_slack": 72,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 4,
+        "1": 1413,
+        "2": 686,
+        "3": 56,
+        "4": 28
+      },
+      "raw_states_checked": 2187,
+      "spectrum_states_checked": 10
+    },
+    {
+      "base": 4,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "724bb7c5dd576ea8d4944d3f542d48bf249d6342290603a69877c8771e963fff",
+        "raw_weights_sha256": "2d6c6e851da7749b4b957f9ec8c9edb347f8643ae3fd75f19281924fb8fc23af",
+        "reduced_graph_sha256": "1eb5935f05a6ab13460c33834d451c82c1753bf0e45e8f5328f6c6bf0fa073ec"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 4,
+          "spectrum_cycle": [
+            []
+          ]
+        }
+      ],
+      "digits": 1,
+      "minimum_superincreasing_slack": null,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 1,
+        "1": 3
+      },
+      "raw_states_checked": 4,
+      "spectrum_states_checked": 1
+    },
+    {
+      "base": 4,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "88f474a5d57fe9614b7c5f39a236f1a090b8dfe301566648b7eb3d0350bf4fc5",
+        "raw_weights_sha256": "69da7067513e31e4a53a781fc19fa39f597973fbd4e7943e35b23ef488c91ad8",
+        "reduced_graph_sha256": "7467aa83238e5cfadf38508cbdecdc7343ad010e262bb3a82e0c6fe10740354d"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 4,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 1,
+          "numeric_cycle": [
+            3,
+            9
+          ],
+          "raw_basin_size": 12,
+          "spectrum_cycle": [
+            [
+              1
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      ],
+      "digits": 2,
+      "minimum_superincreasing_slack": 3,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 3,
+        "1": 9,
+        "2": 4
+      },
+      "raw_states_checked": 16,
+      "spectrum_states_checked": 4
+    },
+    {
+      "base": 4,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "7b1cdc9b15b397e1f0a427ffbede844b2bad421bfff7f70308b6312c43ba5528",
+        "raw_weights_sha256": "8091e5879aa2cfe0cd00e0aeac5ea08182d79d7ca5100fa4505fbf6296932215",
+        "reduced_graph_sha256": "4fa10ffb74e5e1afd4c3a4c2f18e5bc38a90549962254564c10fa86363edfbf3"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 4,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 2,
+          "numeric_cycle": [
+            30
+          ],
+          "raw_basin_size": 60,
+          "spectrum_cycle": [
+            [
+              2
+            ]
+          ]
+        }
+      ],
+      "digits": 3,
+      "minimum_superincreasing_slack": 15,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 2,
+        "1": 26,
+        "2": 18,
+        "3": 18
+      },
+      "raw_states_checked": 64,
+      "spectrum_states_checked": 4
+    },
+    {
+      "base": 4,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "67e498cc91e381dd774f1bb29d6a4271ab59707708638ff845559cbd7f129278",
+        "raw_weights_sha256": "98262ad1ef2b43709254eae615bbdf4b97d0671f7935117b689b9d8d2e62a918",
+        "reduced_graph_sha256": "5449aba37043e840c2c064db19ff36fcd18db98bfed759d1eded2e699f0788b7"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 4,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 2,
+          "numeric_cycle": [
+            126,
+            138
+          ],
+          "raw_basin_size": 168,
+          "spectrum_cycle": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 2,
+          "numeric_cycle": [
+            201
+          ],
+          "raw_basin_size": 84,
+          "spectrum_cycle": [
+            [
+              3,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 4,
+      "minimum_superincreasing_slack": 12,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 4,
+        "1": 136,
+        "2": 80,
+        "3": 36
+      },
+      "raw_states_checked": 256,
+      "spectrum_states_checked": 10
+    },
+    {
+      "base": 4,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "e8415bb3b87450f784ed9764c98121c0e8e7543f8cff6f81fcdc0f16b826aa6c",
+        "raw_weights_sha256": "a4a598f7e17b0172266948bd3ca9f2ff4ed25a779307acbb1f9825b75fe324b3",
+        "reduced_graph_sha256": "a2cac72cbb8aeec186bd31aa0f8501eba6757ab01d7afa6ea0ed6a4a99615ec3"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 4,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 3,
+          "numeric_cycle": [
+            570,
+            765
+          ],
+          "raw_basin_size": 1020,
+          "spectrum_cycle": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        }
+      ],
+      "digits": 5,
+      "minimum_superincreasing_slack": 60,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 3,
+        "1": 251,
+        "2": 190,
+        "3": 220,
+        "4": 360
+      },
+      "raw_states_checked": 1024,
+      "spectrum_states_checked": 10
+    },
+    {
+      "base": 4,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "a949f9a92b0a9157903d0d959cb5b7c2eef32ee0349df611c9598e975c1f8a51",
+        "raw_weights_sha256": "dfaeef307fd8f3fcd3ecb436b2a4cc1255bafc7341b05fdeceac75ccb4440bba",
+        "reduced_graph_sha256": "d05f66835d6696ce3bc6048fc0e1db8ca2dd3f0d7c6e6af31f75e2156aa776fb"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 4,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            2550
+          ],
+          "raw_basin_size": 240,
+          "spectrum_cycle": [
+            [
+              2,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 5,
+          "numeric_cycle": [
+            3369
+          ],
+          "raw_basin_size": 3532,
+          "spectrum_cycle": [
+            [
+              3,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 1,
+          "numeric_cycle": [
+            3873
+          ],
+          "raw_basin_size": 320,
+          "spectrum_cycle": [
+            [
+              3,
+              3,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 6,
+      "minimum_superincreasing_slack": 48,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 4,
+        "1": 840,
+        "2": 680,
+        "3": 760,
+        "4": 900,
+        "5": 876,
+        "6": 36
+      },
+      "raw_states_checked": 4096,
+      "spectrum_states_checked": 20
+    },
+    {
+      "base": 4,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "814aa26568481c44dd0168aa3bfd3b176daea59c21431833c69df7dbeca36a19",
+        "raw_weights_sha256": "4dec190b4ae5ee841e6b21199fa0ecf1de95c4993b5aaa292f5cb62508154111",
+        "reduced_graph_sha256": "8473fe0dd9ecb322b845716ffe5d0548368f6fb08f0427915f6a2d7fb5bcc5ed"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 4,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 5,
+          "numeric_cycle": [
+            14565
+          ],
+          "raw_basin_size": 16380,
+          "spectrum_cycle": [
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 7,
+      "minimum_superincreasing_slack": 240,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 2,
+        "1": 3362,
+        "2": 2842,
+        "3": 2828,
+        "4": 2464,
+        "5": 2646,
+        "6": 2240
+      },
+      "raw_states_checked": 16384,
+      "spectrum_states_checked": 20
+    },
+    {
+      "base": 5,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "95b6a47940c163dcd1a27b109092e9ef9d45bc9c0c5661ee1b1955ca0605bced",
+        "raw_weights_sha256": "df8e4bc7bc4fae2756eb0999a2e286b69fd4400f8318e24661b13158008ca6dc",
+        "reduced_graph_sha256": "f10f23edc058fd0db03e10ce83b6d96600107bb08266fbeab65d92a2fd33e2dd"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 5,
+          "spectrum_cycle": [
+            []
+          ]
+        }
+      ],
+      "digits": 1,
+      "minimum_superincreasing_slack": null,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 1,
+        "1": 4
+      },
+      "raw_states_checked": 5,
+      "spectrum_states_checked": 1
+    },
+    {
+      "base": 5,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "fba162f651cc7c8c71459839ef74e592da93892bfd915a4f0f6962b71f1ebe20",
+        "raw_weights_sha256": "3e5d39704b0d7767de9e5db857f498e91af3aaaffaf0c6533038fafa1b4095d2",
+        "reduced_graph_sha256": "5debd2e24632a473ba4839ebd18ca2f7c6122a90f39b89e7555e82e040da7ed4"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 1,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 9,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 2,
+          "numeric_cycle": [
+            8
+          ],
+          "raw_basin_size": 16,
+          "spectrum_cycle": [
+            [
+              2
+            ]
+          ]
+        }
+      ],
+      "digits": 2,
+      "minimum_superincreasing_slack": 4,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 2,
+        "1": 9,
+        "2": 6,
+        "3": 8
+      },
+      "raw_states_checked": 25,
+      "spectrum_states_checked": 5
+    },
+    {
+      "base": 5,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "91c934f2fe665ffa7df0e28bb197335dec381d6e86a95f0bdd734106fa9a6b96",
+        "raw_weights_sha256": "58a2af77c1299af6b64db608f7a55e0e2167c7f5519e326589056ad3f736e9dd",
+        "reduced_graph_sha256": "93865b2889bc38cbc1ae65a19422aaed50916b2d6f53e793577b0fc267bc939a"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 5,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 2,
+          "numeric_cycle": [
+            48,
+            72
+          ],
+          "raw_basin_size": 120,
+          "spectrum_cycle": [
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      ],
+      "digits": 3,
+      "minimum_superincreasing_slack": 24,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 3,
+        "1": 74,
+        "2": 24,
+        "3": 24
+      },
+      "raw_states_checked": 125,
+      "spectrum_states_checked": 5
+    },
+    {
+      "base": 5,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "677c68bade0a6d1cfcad3014a9fc7bf5f45b9055c97c015e3f2e6baf7a47bffe",
+        "raw_weights_sha256": "d53f1818db62af871d48e6bf0e79dbe3507feba099a909f3f8a7231828657f85",
+        "reduced_graph_sha256": "107c7e394d517b17f663c1984c46fe6d364577e2d3dd41a3917a49368c7eebd4"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 5,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 3,
+          "numeric_cycle": [
+            392
+          ],
+          "raw_basin_size": 620,
+          "spectrum_cycle": [
+            [
+              3,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 4,
+      "minimum_superincreasing_slack": 20,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 2,
+        "1": 99,
+        "2": 248,
+        "3": 212,
+        "4": 64
+      },
+      "raw_states_checked": 625,
+      "spectrum_states_checked": 15
+    },
+    {
+      "base": 5,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "ee85537f70c762fc6509113f4c92d1a65d80f8f14cb4379b60cf60f704f666e2",
+        "raw_weights_sha256": "43d21e534b4d6f86770a0c8e74c4eaddd2499672e9e6863256318a8e2e48be7b",
+        "reduced_graph_sha256": "18333abb7b93a939cdffcf7529569977be1d3f7f53342dc980e783a8ee0d2cca"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 5,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 2,
+          "numeric_cycle": [
+            1992,
+            2616,
+            2856,
+            2232
+          ],
+          "raw_basin_size": 3120,
+          "spectrum_cycle": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ]
+        }
+      ],
+      "digits": 5,
+      "minimum_superincreasing_slack": 120,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 5,
+        "1": 1280,
+        "2": 1700,
+        "3": 140
+      },
+      "raw_states_checked": 3125,
+      "spectrum_states_checked": 15
+    },
+    {
+      "base": 5,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "929ba647d5392df1ce3eb0a6ba40f74d0795cadb0eb0876a76a3f8fcfc08feca",
+        "raw_weights_sha256": "971ed145c39230ec9f5016aa062d87214c3739d52c8cdc5478cb47ff88d52713",
+        "reduced_graph_sha256": "516363e8f1137095d74dc13f496932dbf273c1150a33b068bda73e0e127010dd"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 5,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 4,
+          "numeric_cycle": [
+            7488,
+            10712,
+            9992,
+            13736,
+            11432
+          ],
+          "raw_basin_size": 15620,
+          "spectrum_cycle": [
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              4,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "digits": 6,
+      "minimum_superincreasing_slack": 100,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 6,
+        "1": 3779,
+        "2": 7612,
+        "3": 2228,
+        "4": 1500,
+        "5": 500
+      },
+      "raw_states_checked": 15625,
+      "spectrum_states_checked": 35
+    },
+    {
+      "base": 5,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "a2cf0531fc67459ffd4fe1dd73be2ce6e871eaa8c70b3e3404fc2b08903d303f",
+        "raw_weights_sha256": "85fd15589738245b70a6c6cda87b917a7d094403e9996b7b319edc6e8b9200f8",
+        "reduced_graph_sha256": "7a25cf8a557ed4a676b63913c5a213a77401132a66a06e6607cbb9d60e5b1a52"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 5,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 6,
+          "numeric_cycle": [
+            53712,
+            66216,
+            73056,
+            57432
+          ],
+          "raw_basin_size": 78120,
+          "spectrum_cycle": [
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              4,
+              1,
+              1
+            ],
+            [
+              4,
+              3,
+              2
+            ],
+            [
+              3,
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "digits": 7,
+      "minimum_superincreasing_slack": 600,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 5,
+        "1": 19390,
+        "2": 17808,
+        "3": 15834,
+        "4": 13860,
+        "5": 3598,
+        "6": 4004,
+        "7": 3626
+      },
+      "raw_states_checked": 78125,
+      "spectrum_states_checked": 35
+    },
+    {
+      "base": 6,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "86cc32e8ad14fc55645c21fc3e736d2654745cc005d15a8f055868c9b1b5e710",
+        "raw_weights_sha256": "5ecdd851e35334fe9f44bdd315351bca6259a8059aabceb10b8df2ce3d00ddf5",
+        "reduced_graph_sha256": "461c3b648ff00951e06a0e269792542ff7ad6433fbc6ab927d5502259ec97b48"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 6,
+          "spectrum_cycle": [
+            []
+          ]
+        }
+      ],
+      "digits": 1,
+      "minimum_superincreasing_slack": null,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 1,
+        "1": 5
+      },
+      "raw_states_checked": 6,
+      "spectrum_states_checked": 1
+    },
+    {
+      "base": 6,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "125d3e8f68ffb8163889fec9b24b55a857e0a3951e0d6b6d4b80dd7e21d42416",
+        "raw_weights_sha256": "aca925b2d413f5486b5cc397b42bb6ac551ede8c5601b362645d7784e5a1a3cb",
+        "reduced_graph_sha256": "0451f559b82621cd5fcb54236fa517b1683a4749a00d0285a1926a6176276d99"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 6,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 1,
+          "numeric_cycle": [
+            5,
+            25,
+            15
+          ],
+          "raw_basin_size": 30,
+          "spectrum_cycle": [
+            [
+              1
+            ],
+            [
+              5
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      ],
+      "digits": 2,
+      "minimum_superincreasing_slack": 5,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 4,
+        "1": 20,
+        "2": 12
+      },
+      "raw_states_checked": 36,
+      "spectrum_states_checked": 6
+    },
+    {
+      "base": 6,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "1250520e9557f97f37a59aee3b2f06344d8270bdaa829316b8d4e3eef124aa71",
+        "raw_weights_sha256": "50a57279449f1a3f59485be65631bb823109a04baa4f25dbdd5e8980b715700d",
+        "reduced_graph_sha256": "478e68840d86e3d26c23a810e67b6468245a3183308fb4e939ea32d1718f9659"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 6,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 3,
+          "numeric_cycle": [
+            105
+          ],
+          "raw_basin_size": 210,
+          "spectrum_cycle": [
+            [
+              3
+            ]
+          ]
+        }
+      ],
+      "digits": 3,
+      "minimum_superincreasing_slack": 35,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 2,
+        "1": 58,
+        "2": 48,
+        "3": 78,
+        "4": 30
+      },
+      "raw_states_checked": 216,
+      "spectrum_states_checked": 6
+    },
+    {
+      "base": 6,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "75fae29239db960affaf8ec7dfd22b08bb9375648a135ff856a1ea525c3537bb",
+        "raw_weights_sha256": "5e099d9d711bd07d40bb0f76a965960b49cf70dc8af24f9284b1e8109953db79",
+        "reduced_graph_sha256": "75c892e67ff667fe5f6a564ba6b2523e79c28dd67d95e9968ab90ae63ca7a5e0"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 6,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 3,
+          "numeric_cycle": [
+            430,
+            890,
+            920,
+            675,
+            860,
+            705
+          ],
+          "raw_basin_size": 1290,
+          "spectrum_cycle": [
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "digits": 4,
+      "minimum_superincreasing_slack": 30,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 7,
+        "1": 623,
+        "2": 476,
+        "3": 172,
+        "4": 18
+      },
+      "raw_states_checked": 1296,
+      "spectrum_states_checked": 21
+    },
+    {
+      "base": 6,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "a6d60d3d4106defc20939266ca022e2b7a7192627fb6c4f836b84c8514236058",
+        "raw_weights_sha256": "cf4a70aef8c16107ddcb9fb94ffbc420210661d7f926fb5f197967c604c42ddf",
+        "reduced_graph_sha256": "bcdc38ef14cb38b49bc5de23ac810a87fddd3007f40cb1a90e80b457bcb33419"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 6,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 2,
+          "numeric_cycle": [
+            4305,
+            5180
+          ],
+          "raw_basin_size": 2330,
+          "spectrum_cycle": [
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 5,
+          "numeric_cycle": [
+            5600
+          ],
+          "raw_basin_size": 5440,
+          "spectrum_cycle": [
+            [
+              4,
+              2
+            ]
+          ]
+        }
+      ],
+      "digits": 5,
+      "minimum_superincreasing_slack": 210,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 4,
+        "1": 1722,
+        "2": 1250,
+        "3": 1860,
+        "4": 1780,
+        "5": 870,
+        "6": 290
+      },
+      "raw_states_checked": 7776,
+      "spectrum_states_checked": 21
+    },
+    {
+      "base": 6,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "dc7d787470d2a5caeffe114fe3256b627a507eb0acb8b5aed233910b807e79dd",
+        "raw_weights_sha256": "ca6c42009fdfe0564d6db4f9ec45b7d1998d0fd91903eb59230c224df8178f60",
+        "reduced_graph_sha256": "026631863764e98bf36696ba967541be0a606a8bcc0e6571cda5f68d0cca29e7"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 6,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 6,
+          "numeric_cycle": [
+            16840,
+            42745,
+            35510
+          ],
+          "raw_basin_size": 26760,
+          "spectrum_cycle": [
+            [
+              2,
+              1,
+              0
+            ],
+            [
+              5,
+              3,
+              0
+            ],
+            [
+              4,
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            27195
+          ],
+          "raw_basin_size": 630,
+          "spectrum_cycle": [
+            [
+              3,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 4,
+          "numeric_cycle": [
+            33860
+          ],
+          "raw_basin_size": 13200,
+          "spectrum_cycle": [
+            [
+              4,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 2,
+          "numeric_cycle": [
+            42925
+          ],
+          "raw_basin_size": 6060,
+          "spectrum_cycle": [
+            [
+              5,
+              3,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 6,
+      "minimum_superincreasing_slack": 180,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 7,
+        "1": 8849,
+        "2": 9000,
+        "3": 9720,
+        "4": 6620,
+        "5": 7040,
+        "6": 4140,
+        "7": 1280
+      },
+      "raw_states_checked": 46656,
+      "spectrum_states_checked": 56
+    },
+    {
+      "base": 6,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "4aadbc472055459f35b216476892eb410d5e16472193bfad128527b3820f4724",
+        "raw_weights_sha256": "f7d79ccc4abdd74223ed264629e680ff91f2b6ebeaeb4230c174b1c87789f37c",
+        "reduced_graph_sha256": "9354b705b57b699b7394cdd967158c284096f6c3c86bbfb275491a4c6625a122"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 6,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 9,
+          "numeric_cycle": [
+            218960,
+            259105
+          ],
+          "raw_basin_size": 279930,
+          "spectrum_cycle": [
+            [
+              4,
+              4,
+              1
+            ],
+            [
+              5,
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "digits": 7,
+      "minimum_superincreasing_slack": 1260,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 3,
+        "1": 23103,
+        "10": 5404,
+        "2": 11830,
+        "3": 36582,
+        "4": 28350,
+        "5": 24122,
+        "6": 39452,
+        "7": 77700,
+        "8": 19460,
+        "9": 13930
+      },
+      "raw_states_checked": 279936,
+      "spectrum_states_checked": 56
+    },
+    {
+      "base": 7,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "58faa5683494cd3dd7db44b6449a1d33bc6587dc6907c4174525e1c1719b04b3",
+        "raw_weights_sha256": "d13e1b389e587a6e4cb880910b563fd5f7b321d58cbcc46d19605dd7236b718d",
+        "reduced_graph_sha256": "193969472f2904b240fd9b92cbf476c762aa201c88a8276026ccb94816f4fb4d"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 7,
+          "spectrum_cycle": [
+            []
+          ]
+        }
+      ],
+      "digits": 1,
+      "minimum_superincreasing_slack": null,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 1,
+        "1": 6
+      },
+      "raw_states_checked": 7,
+      "spectrum_states_checked": 1
+    },
+    {
+      "base": 7,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "27be0f867b2d6a8e27449a185533253a5deef75b6b3144b073dc07be3478a17e",
+        "raw_weights_sha256": "e0cd876f3d15ea9d5f7bbba6497bbc481f91c4e387acda35fa3368e24a0c1916",
+        "reduced_graph_sha256": "70dc5de84bbbe0d733c41451b7f54f0b4d0fe8befd43dc1c05b031cea279f290"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 3,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 49,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        }
+      ],
+      "digits": 2,
+      "minimum_superincreasing_slack": 6,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 1,
+        "1": 6,
+        "2": 6,
+        "3": 12,
+        "4": 24
+      },
+      "raw_states_checked": 49,
+      "spectrum_states_checked": 7
+    },
+    {
+      "base": 7,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "ffe858f95aa168e9d49bea51fc03b09221b999ea67377d91c59c04e52d2099b7",
+        "raw_weights_sha256": "5b66cfa0a95b04e3f3fdfe2cf7d8a258fb1788d4cc4bbe5ec6d59c6beb5f8ad4",
+        "reduced_graph_sha256": "dd8457aebb0017a135c8bbe9beeeea5e9d0752cb1d879b94781d22370229bbd5"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 7,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 3,
+          "numeric_cycle": [
+            144,
+            192
+          ],
+          "raw_basin_size": 336,
+          "spectrum_cycle": [
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ]
+        }
+      ],
+      "digits": 3,
+      "minimum_superincreasing_slack": 48,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 3,
+        "1": 148,
+        "2": 60,
+        "3": 96,
+        "4": 36
+      },
+      "raw_states_checked": 343,
+      "spectrum_states_checked": 7
+    },
+    {
+      "base": 7,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "34383b79310cf3d7628e725d98cdd939c71e509ba579f06a92d67d301ab0c09b",
+        "raw_weights_sha256": "f3a75590a07d298ddcac758d4c41ffc7a94763ceb3118c54672defa38b0b2fe8",
+        "reduced_graph_sha256": "75b8dd77daf7eeb5b99420ce954153f22e4b2e942bd952d971d02889aaa5f174"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 7,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 3,
+          "numeric_cycle": [
+            1068,
+            1752,
+            1836
+          ],
+          "raw_basin_size": 2394,
+          "spectrum_cycle": [
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              3
+            ]
+          ]
+        }
+      ],
+      "digits": 4,
+      "minimum_superincreasing_slack": 42,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 4,
+        "1": 483,
+        "2": 1032,
+        "3": 750,
+        "4": 132
+      },
+      "raw_states_checked": 2401,
+      "spectrum_states_checked": 28
+    },
+    {
+      "base": 7,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "d04db68ad7eb51fbc46f02e8b077446761e75ccc137dc9e11505fa69ff71b8ef",
+        "raw_weights_sha256": "116da786663d22162fa1caab83505893d018a573c9e426da29347258f2732be8",
+        "reduced_graph_sha256": "c951931c62474681d5de2b2f0b777a9426ede0f94d138e43f50a29ab80753437"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 7,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 5,
+          "numeric_cycle": [
+            9936,
+            15072,
+            13680,
+            13008,
+            10608
+          ],
+          "raw_basin_size": 16800,
+          "spectrum_cycle": [
+            [
+              4,
+              1
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              4,
+              3
+            ]
+          ]
+        }
+      ],
+      "digits": 5,
+      "minimum_superincreasing_slack": 336,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 6,
+        "1": 4661,
+        "2": 4680,
+        "3": 3080,
+        "4": 1420,
+        "5": 2520,
+        "6": 440
+      },
+      "raw_states_checked": 16807,
+      "spectrum_states_checked": 28
+    },
+    {
+      "base": 7,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "edc288d588bc5f5324a778fbaea50ff62c2f95c0905e8918992d278c845b7396",
+        "raw_weights_sha256": "ec1cac2eb887301c0220baef0fabec012e9205875835da05265e4ed81bd4a7a4",
+        "reduced_graph_sha256": "eee11c107a1b1dc29c256ebe8dca493d79cb1bef30fb573404a5ecd739514635"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 7,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 6,
+          "numeric_cycle": [
+            55500,
+            89112,
+            91800,
+            72012,
+            91212,
+            77388
+          ],
+          "raw_basin_size": 117642,
+          "spectrum_cycle": [
+            [
+              3,
+              2,
+              1
+            ],
+            [
+              5,
+              2,
+              1
+            ],
+            [
+              5,
+              3,
+              2
+            ],
+            [
+              4,
+              2,
+              0
+            ],
+            [
+              5,
+              3,
+              0
+            ],
+            [
+              4,
+              4,
+              2
+            ]
+          ]
+        }
+      ],
+      "digits": 6,
+      "minimum_superincreasing_slack": 294,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 7,
+        "1": 17160,
+        "2": 31732,
+        "3": 38560,
+        "4": 10680,
+        "5": 10532,
+        "6": 8672,
+        "7": 306
+      },
+      "raw_states_checked": 117649,
+      "spectrum_states_checked": 84
+    },
+    {
+      "base": 7,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "c03ba5c2065e6c958616703de8d9a02b6bec42dae0b410dbd3c6d3ea567dfb51",
+        "raw_weights_sha256": "48f1d928544344cdce0d8b1722d4fed32cbb21bcb94b00fd2b8d6e0798815008",
+        "reduced_graph_sha256": "776e83384a1d7f6df5302caa57dc30bceaae5659687e72fe89e1e1722e10541a"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 7,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 13,
+          "numeric_cycle": [
+            640992,
+            760992,
+            674592,
+            780144,
+            660144,
+            643344
+          ],
+          "raw_basin_size": 823536,
+          "spectrum_cycle": [
+            [
+              5,
+              3,
+              1
+            ],
+            [
+              6,
+              3,
+              2
+            ],
+            [
+              5,
+              5,
+              1
+            ],
+            [
+              6,
+              4,
+              3
+            ],
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              5,
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "digits": 7,
+      "minimum_superincreasing_slack": 2352,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 7,
+        "1": 165060,
+        "10": 8904,
+        "11": 13860,
+        "12": 8890,
+        "13": 53550,
+        "14": 27580,
+        "2": 56518,
+        "3": 37226,
+        "4": 39326,
+        "5": 37688,
+        "6": 71638,
+        "7": 86240,
+        "8": 124390,
+        "9": 92666
+      },
+      "raw_states_checked": 823543,
+      "spectrum_states_checked": 84
+    },
+    {
+      "base": 8,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "0d4c6949b7dc17ecda6bda81e01a15db6202a1de7e1208367349dc1ba458b24e",
+        "raw_weights_sha256": "b1e9d37c563a1498b1b545cd54beea4ddf96a7a283ae4380026294d95508cd17",
+        "reduced_graph_sha256": "b588d38d303843dca3bbf8f640d749cabe9ddb1fac62235331420a2093299543"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 8,
+          "spectrum_cycle": [
+            []
+          ]
+        }
+      ],
+      "digits": 1,
+      "minimum_superincreasing_slack": null,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 1,
+        "1": 7
+      },
+      "raw_states_checked": 8,
+      "spectrum_states_checked": 1
+    },
+    {
+      "base": 8,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "5739812e8e757dcbd7a1285e19b3bf7b13494f4e4a4100861381294b2f3c8970",
+        "raw_weights_sha256": "06cba55db092cb8223a1d7a47ea4bca26807b31ef19d6301ba26827e74103802",
+        "reduced_graph_sha256": "434fc849c76e814f316941bc956b42f43751fd797c9960011889a40513882aa1"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 8,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 1,
+          "numeric_cycle": [
+            7,
+            49,
+            35
+          ],
+          "raw_basin_size": 42,
+          "spectrum_cycle": [
+            [
+              1
+            ],
+            [
+              7
+            ],
+            [
+              5
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 1,
+          "numeric_cycle": [
+            21
+          ],
+          "raw_basin_size": 14,
+          "spectrum_cycle": [
+            [
+              3
+            ]
+          ]
+        }
+      ],
+      "digits": 2,
+      "minimum_superincreasing_slack": 7,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 5,
+        "1": 35,
+        "2": 24
+      },
+      "raw_states_checked": 64,
+      "spectrum_states_checked": 8
+    },
+    {
+      "base": 8,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "07a360e965ba3a1d7ea3cd4931df236524ec48e26c4bd64a2a794582d5a7658e",
+        "raw_weights_sha256": "68f9260c2a04c0e03252180eedc7bd77bbbbaba604de33bceada1ffca5dfc6d1",
+        "reduced_graph_sha256": "0f1d85387ac87808c18795ec4b6cfed7a2d9b3775a0975045b7b6f046ade75aa"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 8,
+          "spectrum_cycle": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 4,
+          "numeric_cycle": [
+            252
+          ],
+          "raw_basin_size": 504,
+          "spectrum_cycle": [
+            [
+              4
+            ]
+          ]
+        }
+      ],
+      "digits": 3,
+      "minimum_superincreasing_slack": 63,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 2,
+        "1": 102,
+        "2": 90,
+        "3": 162,
+        "4": 114,
+        "5": 42
+      },
+      "raw_states_checked": 512,
+      "spectrum_states_checked": 8
+    },
+    {
+      "base": 8,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "472fb2acb51ba8cc75e23c99fa056303468b5c78281a28f5f805a5488b030461",
+        "raw_weights_sha256": "1b1e15186f8ebd0018cb960ecf6bc66307f10e04a7275ab1a75a8fdb1c451d2f",
+        "reduced_graph_sha256": "9eb9b9a9369e20414e8777fb73c0ef40a2fb5c0c3f5680f3fc58f155c8415313"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 8,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 4,
+          "numeric_cycle": [
+            1022,
+            3122,
+            3290,
+            2044,
+            2212
+          ],
+          "raw_basin_size": 2768,
+          "spectrum_cycle": [
+            [
+              2,
+              0
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              3
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 3,
+          "numeric_cycle": [
+            1589,
+            3178,
+            2723
+          ],
+          "raw_basin_size": 1320,
+          "spectrum_cycle": [
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              5,
+              3
+            ]
+          ]
+        }
+      ],
+      "digits": 4,
+      "minimum_superincreasing_slack": 56,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 9,
+        "1": 1303,
+        "2": 1328,
+        "3": 776,
+        "4": 320,
+        "5": 360
+      },
+      "raw_states_checked": 4096,
+      "spectrum_states_checked": 36
+    },
+    {
+      "base": 8,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "c0676d4374abfab2234c0c31c4b58a2db0b91141463164edda4d53c95a2f192d",
+        "raw_weights_sha256": "1c4f048a4751e56a5e1e612b92d45a89fa6516cfe34249120c7c9dbdb601f6e4",
+        "reduced_graph_sha256": "af466af5e17f5cf850f7b3726364f0b93bb68050687a120991d4755a73871936"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 8,
+          "spectrum_cycle": [
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 1,
+          "numeric_cycle": [
+            17892,
+            20475
+          ],
+          "raw_basin_size": 1910,
+          "spectrum_cycle": [
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 7,
+          "numeric_cycle": [
+            21483,
+            25578,
+            26586,
+            21987
+          ],
+          "raw_basin_size": 30850,
+          "spectrum_cycle": [
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              5,
+              3
+            ]
+          ]
+        }
+      ],
+      "digits": 5,
+      "minimum_superincreasing_slack": 504,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 7,
+        "1": 9591,
+        "2": 4730,
+        "3": 3640,
+        "4": 4550,
+        "5": 1890,
+        "6": 3280,
+        "7": 2600,
+        "8": 2480
+      },
+      "raw_states_checked": 32768,
+      "spectrum_states_checked": 36
+    },
+    {
+      "base": 8,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "a48f14a756ba05b820e9307348ed690b557dce5de45fd57fcdf82288cc1c08ee",
+        "raw_weights_sha256": "9412d1c359b00e6ada2a8a3719ab1112d0514337e03cc98ad9bd7edc3d446ca5",
+        "reduced_graph_sha256": "d6d585e0033f01d74a7fd2921c3804730e56ef8ff32f988bce640d85245287b2"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 8,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 4,
+          "numeric_cycle": [
+            102837,
+            217938,
+            177443
+          ],
+          "raw_basin_size": 28564,
+          "spectrum_cycle": [
+            [
+              3,
+              1,
+              1
+            ],
+            [
+              6,
+              5,
+              2
+            ],
+            [
+              5,
+              3,
+              3
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            147420
+          ],
+          "raw_basin_size": 1200,
+          "spectrum_cycle": [
+            [
+              4,
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 15,
+          "numeric_cycle": [
+            213402
+          ],
+          "raw_basin_size": 232372,
+          "spectrum_cycle": [
+            [
+              6,
+              4,
+              1
+            ]
+          ]
+        }
+      ],
+      "digits": 6,
+      "minimum_superincreasing_slack": 448,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 6,
+        "1": 16082,
+        "10": 24960,
+        "11": 18360,
+        "12": 19120,
+        "13": 21884,
+        "14": 21680,
+        "15": 5760,
+        "16": 1040,
+        "2": 23320,
+        "3": 12360,
+        "4": 12120,
+        "5": 15084,
+        "6": 16560,
+        "7": 13200,
+        "8": 22524,
+        "9": 18084
+      },
+      "raw_states_checked": 262144,
+      "spectrum_states_checked": 120
+    },
+    {
+      "base": 8,
+      "checks": {
+        "all_spectra_have_positive_weight": true,
+        "attached_leaves_nonnegative": true,
+        "attached_leaves_sum_identity": true,
+        "coefficient_slack_closed_form_identity": true,
+        "full_indegrees_sum_to_raw_count": true,
+        "lambda_injective": true,
+        "multiset_weights_match_raw_fibers": true,
+        "post_first_step_conjugacy": true,
+        "raw_basins_partition_domain": true,
+        "raw_factorization_exhaustive": true,
+        "raw_hitting_histogram_partitions_domain": true,
+        "raw_image_cardinality": true,
+        "raw_image_equals_lambda_image": true,
+        "reduced_indegrees_sum_to_state_count": true,
+        "representative_surjectivity": true,
+        "spectrum_count_formula": true,
+        "superincreasing_slacks_positive": true,
+        "weights_cover_raw_domain": true
+      },
+      "commitments": {
+        "raw_transition_sha256": "68c5d881e29b89c6cd43b2b33f18c3522c9b4f41eac7accf7a631bb7c09f706d",
+        "raw_weights_sha256": "591aa27f11e77c47089deea2ca22421b8a397d135c7802bb2bd35971a2c52756",
+        "reduced_graph_sha256": "467e3a1c0b15b90a472d109ce474da56e6dc47307385a157679fd47520acbf81"
+      },
+      "cycles": [
+        {
+          "maximum_reduced_depth": 0,
+          "numeric_cycle": [
+            0
+          ],
+          "raw_basin_size": 8,
+          "spectrum_cycle": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 8,
+          "numeric_cycle": [
+            1445787,
+            1941345,
+            1777482,
+            1752786,
+            1449819,
+            1646442,
+            1715994
+          ],
+          "raw_basin_size": 1636418,
+          "spectrum_cycle": [
+            [
+              5,
+              4,
+              1
+            ],
+            [
+              7,
+              3,
+              2
+            ],
+            [
+              6,
+              6,
+              2
+            ],
+            [
+              6,
+              5,
+              4
+            ],
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              2,
+              2
+            ],
+            [
+              6,
+              4,
+              3
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 2,
+          "numeric_cycle": [
+            1707930,
+            1978137,
+            1740690,
+            1982169
+          ],
+          "raw_basin_size": 264936,
+          "spectrum_cycle": [
+            [
+              6,
+              4,
+              1
+            ],
+            [
+              7,
+              4,
+              3
+            ],
+            [
+              6,
+              5,
+              1
+            ],
+            [
+              7,
+              4,
+              4
+            ]
+          ]
+        },
+        {
+          "maximum_reduced_depth": 3,
+          "numeric_cycle": [
+            1711962
+          ],
+          "raw_basin_size": 195790,
+          "spectrum_cycle": [
+            [
+              6,
+              4,
+              2
+            ]
+          ]
+        }
+      ],
+      "digits": 7,
+      "minimum_superincreasing_slack": 4032,
+      "proof_mode": "exhaustive_raw_and_reduced_integer_arithmetic",
+      "raw_hitting_histogram": {
+        "0": 13,
+        "1": 464725,
+        "2": 449890,
+        "3": 291466,
+        "4": 336000,
+        "5": 268912,
+        "6": 188104,
+        "7": 88900,
+        "8": 9044,
+        "9": 98
+      },
+      "raw_states_checked": 2097152,
+      "spectrum_states_checked": 120
+    }
+  ],
+  "certificate_sha256": "0aa747402f00b6901b9f11111f3dfe6066466b3425aadd455803c6373e09af75",
+  "epistemic_status": {
+    "independence": "Generated by proofs/independent_oracle.py without importing the production kaprekar package.",
+    "universal_claim": "The algebraic proof in paper/theory_addendum.md is universal; this artifact is a finite exhaustive proof over its declared grid."
+  },
+  "schema": "kaprekar-independent-proof-v1",
+  "scope": {
+    "base_max": 8,
+    "base_min": 2,
+    "case_count": 49,
+    "digits_max": 7,
+    "digits_min": 1,
+    "raw_states_checked": 3816497,
+    "spectrum_states_checked": 973
+  }
+}
