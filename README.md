@@ -240,7 +240,13 @@ lake build
 
 The Lean source contains no `sorry` placeholders or added axioms. CI also asks
 two additional checkers, LeanChecker and nanoda, to reject incomplete or
-ill-typed proof artifacts.
+ill-typed proof artifacts. To reproduce the fully independent nanoda pass with
+the same immutable exporter and checker revisions used in CI (this creates an
+approximately 900 MB temporary export):
+
+```bash
+python3 scripts/check_lean_nanoda.py
+```
 
 Generate and then independently recompute the complete finite proof
 certificate (49 parameter pairs and 3,816,497 raw states):

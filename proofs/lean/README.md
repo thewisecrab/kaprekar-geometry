@@ -14,6 +14,12 @@ lake build
 `lake build` succeeds only after Lean has elaborated and checked every theorem;
 the files do not use `sorry` or add axioms.
 
+From the repository root, `python3 scripts/check_lean_nanoda.py` additionally
+exports the complete environment and checks it with an independently pinned
+kernel implementation. Its allowlist is limited to `propext`,
+`Classical.choice`, `Quot.sound`, and `Lean.trustCompiler`; any declaration that
+depends on `sorryAx` or another unlisted axiom fails.
+
 The final identification of the order-free multiset type with weakly decreasing
 integer tuples, and the injectivity step needed to turn its cardinality into
 the one-step image cardinality, remain paper proofs backed by the independent

@@ -1,21 +1,21 @@
 {
   "artifact_sha256": {
-    "decimal_dynamics.json": "2bdd9b490e35ede042b72135cdd1f288ebd78923672fe79303c99f42fd6723dc",
+    "decimal_dynamics.json": "e0050abeace0677556f7f12f528255f4e9b9c5792fe25b8c73a57d6cde84ea3a",
     "independent_proof_certificate.json": "bc9423b6af47510d7551f2a8989f273fb6fa862120fc360f3c9f247d23b36dcb",
-    "paper_verification.json": "cb5dbb6e411f2a6c0033dcab7f879cc4b6932186e0e5dfbff763bf1c33db4390"
+    "paper_verification.json": "46a4a138c830dccbfb9c174802d5fc40df2ca5a231f0376db82d017ab7aa6616"
   },
   "artifacts": [
     "paper_verification.json",
     "decimal_dynamics.json",
     "independent_proof_certificate.json"
   ],
-  "generated_at": "2026-07-15T11:12:49.479011+00:00",
+  "generated_at": "2026-07-15T11:30:46.069180+00:00",
   "nondeterministic_fields": [
     "generated_at",
     "duration_seconds"
   ],
   "package_version": "0.1.0",
-  "python": "3.12.13",
+  "python": "3.13.7",
   "source_sha256": {
     "arxiv_main_tex": "17293e7fe130b63e778cf44a4497de7445b87ab6a9eb22a01220271466237d41",
     "arxiv_references": "8bbd2621463b1efd6e5e5ee4575cc6fdef2e93ac971f1d3ddcbd095f9831cbfe",
@@ -49,9 +49,10 @@
     "proofs/lean/KaprekarProofs.lean",
     "proofs/lean/README.md",
     "proofs/lean/lake-manifest.json",
-    "proofs/lean/lakefile.toml",
+    "proofs/lean/lakefile.lean",
     "proofs/lean/lean-toolchain",
     "pyproject.toml",
+    "scripts/check_lean_nanoda.py",
     "scripts/prove.py",
     "scripts/release_check.py",
     "scripts/reproduce.py",
@@ -74,5 +75,5 @@
     "tests/test_selective.py",
     "tests/test_verification_cli.py"
   ],
-  "source_tree_sha256": "3ac905014b9ecad25549f24cf4b23b780a9b97228fea56094abd9acc147a670f"
+  "source_tree_sha256": "3a8bf1cc021022125bb991fc491bf84c4834288013dc99c99bc018a80ee7123f"
 }
