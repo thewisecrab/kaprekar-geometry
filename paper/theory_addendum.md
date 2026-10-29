@@ -13,12 +13,12 @@ The original PDF is preserved as the submitted artifact because its LaTeX source
 Prichett, Ludington, and Lapenta explicitly define the arbitrary-base outer-difference tuple and state that the transform depends entirely on it. The manuscript must therefore not present factorization through outer gaps as a newly discovered principle. The defensible contribution is narrower and stronger:
 
 1. the explicit integer linear map \(\Lambda_{b,n}\);
-2. its injectivity on the spectrum set;
-3. the exact one-step image cardinality;
+2. an arbitrary-base proof of its injectivity on the spectrum set (base-10 injectivity of the outer-difference parameters is Nuez 2022, equation (14), which also counts 219 classes at widths 6 and 7; 219 plus the zero class is \(\binom{12}{3}=220\));
+3. the closed-form one-step image cardinality in every base;
 4. the exact conjugacy, complete-graph, and weighted-basin consequences below; and
 5. the proposed normalized-logit reparameterization and its empirical hypotheses.
 
-Primary source: [Prichett, Ludington, and Lapenta (1981)](https://www.fq.math.ca/Scanned/19-1/prichett.pdf).
+Primary source for the classical reduction: [Prichett, Ludington, and Lapenta (1981)](https://www.fq.math.ca/Scanned/19-1/prichett.pdf). Primary source for the base-10 parameter correspondence: [Nuez (2022)](https://doi.org/10.3390/sym14010037).
 
 ### 1.2 “Constant” and “fixed point” must not be conflated
 
@@ -507,7 +507,7 @@ Chen, Ono, Schwartz, and Thakur proved in June 2026 that for every odd base \(B>
 
 This yields complete terminal-cycle descriptions and counts, a maximum terminal-cycle length of at most \((B-1)/2\), and a sharp equality criterion for certain primes. It is materially stronger than generic finite-state enumeration for this regime and should be a dedicated refinement after the general reduction theorem.
 
-Primary sources: [paper](https://arxiv.org/abs/2606.20439), [Lean artifact](https://github.com/AxiomMath/kaprekar4).
+Primary sources: [Journal of Integer Sequences 29 (2026), Article 26.4.7](https://cs.uwaterloo.ca/journals/JIS/VOL29/Ono/ono3.html) (earlier preprint [arXiv:2606.20439](https://arxiv.org/abs/2606.20439)), [Lean artifact](https://github.com/AxiomMath/kaprekar4).
 
 The repository's generic graph certificate is complementary: it covers arbitrary \((b,n)\), while the 2026 theorem explains the number-theoretic structure for odd-base four-digit systems.
 
@@ -802,7 +802,7 @@ s_1-s_r\leq\varepsilon.
 
 The second inequality supplies the interpretable guarantee \(p_r/p_1\geq e^{-\varepsilon}\). Even with this cap, the result is an approximate logit-regret gate, not exact speculative sampling. A safe lossless use is to let the geometry choose draft length or verification effort while leaving the standard \(p/q\) accept-and-correct rule unchanged.
 
-The current manuscript also has a direct novelty collision. [MARS](https://arxiv.org/abs/2601.15498) already studies target-logit low-margin relaxed verification at scale. The later [acceptance-certificate theory](https://arxiv.org/abs/2606.30265) gives exact KL rejection certificates and sharp margin bounds across strict, relaxed, top-m, entropy, and tree rules. The PDF's ratio lemma remains correct, but it should be presented as an elementary target-band identity and compared with these stronger results.
+The current manuscript also has a direct novelty collision. [MARS](https://doi.org/10.18653/v1/2026.findings-acl.421) (Findings of ACL 2026; earlier preprint arXiv:2601.15498) already studies target-logit low-margin relaxed verification at scale. [AdaptiveSpec](https://arxiv.org/abs/2609.02897) deploys the capped ratio gate \(p(\mathrm{draft})/p(\mathrm{top}\text{-}1)\ge\kappa\) and describes it as lossy. The later [acceptance-certificate theory](https://arxiv.org/abs/2606.30265) gives exact KL rejection certificates and sharp margin bounds across strict, relaxed, top-m, entropy, and tree rules. The PDF's ratio lemma remains correct, but it should be presented as an elementary target-band identity and compared with these stronger results.
 
 ## 10. What an empirical claim must now beat
 
@@ -823,6 +823,7 @@ An honest benchmark must include all of the following.
 - [LogTokU / Estimating LLM Uncertainty with Evidence](https://arxiv.org/abs/2502.00290);
 - [entropy plus correctness probes](https://arxiv.org/abs/2603.21172);
 - [Min-k local sorted-logit geometry](https://arxiv.org/abs/2604.11012);
+- [HALT](https://arxiv.org/abs/2602.02888), a planned top-20 log-probability baseline, not a reported comparison;
 - semantic-entropy or low-sample semantic baselines; and
 - hidden-state probes and hybrid output-plus-probe models.
 
@@ -838,7 +839,7 @@ Conformal guarantees must name the prediction target, nonconformity score, calib
 
 ## 11. Evidence labels for the revised abstract
 
-- **Established here:** explicit \(\Lambda\), superincreasing injectivity, exact image size, exact conjugacy, complete weighted-graph representation, and polynomial fixed-base basin computation.
+- **Established here:** explicit \(\Lambda\), an arbitrary-base superincreasing proof and closed-form image size (base-10 injectivity is Nuez 2022, eq. (14)), exact conjugacy, complete weighted-graph representation, and polynomial fixed-base basin computation.
 - **Established elsewhere:** classical outer-gap dependence, modern fixed-point classifications, odd-base four-digit projective doubling, and paper-specific UQ/speculative-decoding results.
 - **Implemented diagnostic:** normalized logit coordinates, degenerate/tail handling, exact ratio identities, and a benchmark contract.
 - **Promising but unvalidated:** any predictive advantage of KGS, production routing, abstention, or speedup.

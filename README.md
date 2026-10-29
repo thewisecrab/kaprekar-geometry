@@ -25,7 +25,7 @@ assigns one; no identifier is currently claimed.
 ## What is established
 
 - `K = Lambda o Sigma` on the fixed-width base-`b` domain.
-- `Lambda` is injective on the ordered spectrum set.
+- `Lambda` is injective on the ordered spectrum set. For base 10, the same-image criterion is Nuez (2022), equation (14), which also counts 219 parametric classes at widths 6 and 7 (219 plus the zero class is `C(12, 3) = 220`). The contribution here is the arbitrary-base proof and the closed-form count.
 - The one-step image contains exactly `comb(b + floor(n/2) - 1, floor(n/2))` states.
 - The full dynamics after one step are conjugate to the reduced spectrum graph.
 - Raw basin populations are exact multinomial weights, not unweighted spectrum counts.
@@ -229,8 +229,10 @@ KAPREKAR_RUN_SLOW_TESTS=1 PYTHONPATH=src \
 
 The original `kaprekar_verification.py` remains executable for manuscript compatibility.
 
-Machine-check the universal even/odd pairing and Kaprekar factorization theorem
-with the pinned Lean 4/Mathlib project:
+Machine-check the universal even/odd pairing, Kaprekar factorization, the
+equivalence between digit multisets and weakly decreasing spectra, and the
+injective image count of the linear reconstruction with the pinned Lean
+4/Mathlib project:
 
 ```bash
 cd proofs/lean
@@ -238,7 +240,10 @@ lake exe cache get
 lake build
 ```
 
-The Lean source contains no `sorry` placeholders or added axioms. CI also asks
+The Lean source contains no `sorry` placeholders or added axioms. It does not
+formalize the bridge from raw fixed-width integers, weighted graphs, basins,
+logit theorems, or the speculative residual theorem. Those remain paper proofs
+plus the independent finite certificate. CI also asks
 two additional checkers, LeanChecker and nanoda, to reject incomplete or
 ill-typed proof artifacts. To reproduce the fully independent nanoda pass with
 the same immutable exporter and checker revisions used in CI (this creates an

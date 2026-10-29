@@ -1,32 +1,32 @@
 {
   "artifact_sha256": {
-    "decimal_dynamics.json": "e0050abeace0677556f7f12f528255f4e9b9c5792fe25b8c73a57d6cde84ea3a",
+    "decimal_dynamics.json": "3194e9816e86315f5423aec659445fd887bb3b61277cd2dd5474be5354a801a2",
     "independent_proof_certificate.json": "bc9423b6af47510d7551f2a8989f273fb6fa862120fc360f3c9f247d23b36dcb",
-    "paper_verification.json": "46a4a138c830dccbfb9c174802d5fc40df2ca5a231f0376db82d017ab7aa6616"
+    "paper_verification.json": "773192761a8c8e70154e46f6e8640dbdcc58cd547604b7bc1f61961bdf2e58df"
   },
   "artifacts": [
     "paper_verification.json",
     "decimal_dynamics.json",
     "independent_proof_certificate.json"
   ],
-  "generated_at": "2026-07-15T11:30:46.069180+00:00",
+  "generated_at": "2026-10-29T13:48:52.724829+00:00",
   "nondeterministic_fields": [
     "generated_at",
     "duration_seconds"
   ],
   "package_version": "0.1.0",
-  "python": "3.13.7",
+  "python": "3.12.3",
   "source_sha256": {
-    "arxiv_main_tex": "17293e7fe130b63e778cf44a4497de7445b87ab6a9eb22a01220271466237d41",
-    "arxiv_references": "8bbd2621463b1efd6e5e5ee4575cc6fdef2e93ac971f1d3ddcbd095f9831cbfe",
+    "arxiv_main_tex": "214f32766bc1a8fb6569f7450921b4e9f5e758703ecb153e5b01b521a886cff3",
+    "arxiv_references": "09b3e9944f4cf80411d5464d872d6fd55d798d21c2da033492e470820df31458",
     "arxiv_source_bundle": "e9b3bbbefafdf123778dbc21b4e00dff89771c7e63420b4efd109e0498a13745",
     "authored_arxiv_pdf": "a17da2b8736e22fd1afd55189854f1d4bed0f84b60e6f10f9c425d5efc3f132b",
     "compatibility_verifier": "5baca12829a4ce7d03b0d3d9b89bfaae22c39b72b77f81a1acc5eba8e010a8d4",
     "independent_oracle": "dae36125df5ce77b065c7c9097e48d273cca8fb948ed0995f437b589ae0afc8c",
-    "lean_proofs": "febb927a9580a28d6bfea2c8dcdf4d5d8e1a68f62947696e484b2674b44bed3c",
+    "lean_proofs": "f69fcd6870cd0b5895f132f490f4123cc7e7ac8e96655df2b5b4a8e2a37ff54a",
     "original_pdf": "5362a1f8041025238d25cb8a8d2da599d3bff2c5dd12105935d13fcaaba256a3",
-    "proof_companion": "7e415c4080a880a857138bed490d8e862f58bdee795df842f392e0241360c60f",
-    "theory_addendum": "63774ee038608c7bcbc61043853f4c472c73212515802e4b13700e7b922ac968"
+    "proof_companion": "2637f03343a8d7c3ede367340ac9a5c7bff530ff235236d860710dc0cabe88a9",
+    "theory_addendum": "3b06d17bcb36dda08e08893d60e8ed3ef0b371b08ebc4ca3ede62311d195cd80"
   },
   "source_tree_files": [
     ".github/workflows/ci.yml",
@@ -75,5 +75,5 @@
     "tests/test_selective.py",
     "tests/test_verification_cli.py"
   ],
-  "source_tree_sha256": "3a8bf1cc021022125bb991fc491bf84c4834288013dc99c99bc018a80ee7123f"
+  "source_tree_sha256": "e35e5d92c3539bde0b1d116cab244ec83a1db0876b8d2096561dcde850bdeeb6"
 }

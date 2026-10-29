@@ -620,8 +620,8 @@ shift do not satisfy this theorem's assumptions.
 
 | Claim | Strongest available status |
 |---|---|
-| Factorization \(K=\Lambda\Sigma\) | Universal proof, Theorem 1.1; machine-checked in `proofs/lean/KaprekarProofs.lean` |
-| Exact image cardinality | Universal proof, Theorem 1.3 |
+| Factorization \(K=\Lambda\Sigma\) | Universal proof, Theorem 1.1; machine-checked for arbitrary digit vectors in `proofs/lean/KaprekarProofs.lean` |
+| Exact image cardinality | Universal proof, Theorem 1.3. Lean checks the multiset/spectrum equivalence and the injective image count of the linear reconstruction. The bridge from raw fixed-width integers is not formalized |
 | Cycle and transient correspondence | Universal conjugacy proof, Theorem 2.1 |
 | Complete weighted graph and basins | Universal proofs, Theorems 2.2 and 3.1 |
 | Decimal cycle identities and basin counts | Exact finite certificates |
@@ -642,15 +642,17 @@ The last three rows cannot be converted into theorems by more local testing.
 They require preregistered external experiments and must remain labeled as
 hypotheses.
 
-The external odd-base result is independently available as the
-[2026 paper](https://arxiv.org/abs/2606.20439) and its
+The external odd-base result is independently available as Chen, Ono, Schwartz,
+and Thakur, Journal of Integer Sequences 29 (2026), Article 26.4.7
+([journal version](https://cs.uwaterloo.ca/journals/JIS/VOL29/Ono/ono3.html);
+earlier preprint [arXiv:2606.20439](https://arxiv.org/abs/2606.20439)) and its
 [Lean development](https://github.com/AxiomMath/kaprekar4).
 
 The repository's own Lean project is pinned by `lean-toolchain` and
-`lake-manifest.json`. It proves the universal even/odd pairing identities,
-factorization theorem, and the cardinality of the order-free gap multiset type,
-not merely the finite certificate grid. The explicit equivalence from that
-multiset type to weakly decreasing integer spectra, the injectivity bridge to
-the image count, and the remaining universal results are currently hand proofs
-backed by independent executable stress tests; they should not be described as
-fully formalized.
+`lake-manifest.json`. It proves the universal even/odd pairing identities, the
+factorization theorem, the equivalence between digit multisets and weakly
+decreasing spectra, and the injective image count of the linear reconstruction.
+It does not formalize the bridge from raw fixed-width integers, weighted graph
+reconstruction, basins, entropy, logit theorems, or the speculative residual
+theorem. Those remain hand proofs backed by independent executable stress
+tests and must not be described as machine-checked.

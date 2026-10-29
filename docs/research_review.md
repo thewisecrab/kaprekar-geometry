@@ -5,7 +5,7 @@
 
 ## Executive verdict
 
-The manuscript contains a correct and useful exact image theorem, but the original version needs major revision before scholarly submission. Its strongest defensible contribution is not the discovery of outer-gap reduction—the 1981 literature states that dependence explicitly—but the combination of an explicit linear reconstruction, injectivity, exact image size, and the new full-graph/weighted-basin consequences developed in this repository.
+The manuscript contains a correct and useful exact image theorem, but the original version needs major revision before scholarly submission. Outer-gap reduction is classical (Prichett, Ludington, and Lapenta 1981). Base-10 injectivity of the outer-difference parameters, together with the count of 219 classes at widths 6 and 7, is Nuez (2022, equation 14). The contribution is the arbitrary-base proof, the closed-form count, and the full-graph/weighted-basin consequences developed in this repository.
 
 The normalized logit coordinates are mathematically valid. They are also an invertible reparameterization of relative sorted top-k logits, not evidence of a new reliability method. The original LLM claims are hypotheses. The speculative ratio lemma is correct algebra but is not a distribution-preserving verification theorem and overlaps directly with existing margin-aware work.
 
@@ -48,9 +48,12 @@ The workspace is now a real research-software project: strict APIs, exact functi
 - [Prichett, Ludington, and Lapenta (1981)](https://www.fq.math.ca/Scanned/19-1/prichett.pdf) explicitly define the arbitrary-base outer-difference tuple and state that the transform depends entirely on it. This narrows the novelty claim.
 - [Iwasaki (2024)](https://www.fq.math.ca/Papers/62-4/iwasaki06162024-ASrev2.pdf) gives an explicit five-family classification of decimal nonzero fixed points and records a correction to the 1981 Class B conditions.
 - [Devlin and Zeng (2020/2021)](https://arxiv.org/abs/2010.11756) determine maximum distances and convergence fractions for four-digit systems. In decimal, every four-digit non-repdigit fixed-width state reaches 6174 within seven steps.
-- [Kay and Downes-Ward (2024)](https://arxiv.org/abs/2408.12257) classify major even-base cycle families; completeness is proved only for base 4.
-- [Dahl (2026)](https://www.mdpi.com/1099-4300/28/1/92) studies decimal attractor basins and coarse-grained entropy. The exact weighted theorem in the addendum computes full-state entropy, basins, and convergence statistics on finite instances; it does not replace Dahl's intentionally projected drift/Markov analysis.
-- [Chen, Ono, Schwartz, and Thakur (June 2026)](https://arxiv.org/abs/2606.20439) show that every four-digit odd-base orbit enters a stable region within three difference-coordinate steps and is then conjugate to projective doubling. The associated [Lean artifact](https://github.com/AxiomMath/kaprekar4) formalizes the main result.
+- [Kay and Downes-Ward (2024)](https://arxiv.org/abs/2408.12257) classify major even-base cycle families; completeness is proved only for base 4. The coauthor's name is Katrina Downes-Ward.
+- [Nuez (2022)](https://doi.org/10.3390/sym14010037), equation (14), states the base-10 same-image criterion for outer-difference parameters and counts 219 classes at widths 6 and 7. Adding the zero class gives \(\binom{12}{3}=220\).
+- [Dahl (2026)](https://doi.org/10.3390/e28010092) studies decimal attractor basins and coarse-grained entropy. Cite this Entropy article rather than arXiv:2512.05124, which is an earlier preprint of the same work. The nonzero width-5 and width-6 basin sizes in `results/decimal_dynamics.json` agree with Dahl (48480, 48320, 3190 and 935520, 62520, 1950). The exact weighted theorem in the addendum does not replace Dahl's projected drift analysis.
+- [Mayne, Shapiro, and Van Cott (2026)](https://arxiv.org/abs/2608.22564) classify families of decimal 2-cycles, including the width-5 cycle through 53955 and 59994.
+- [Dolan, K-cycles (2026)](https://doi.org/10.1080/00255572.2026.2680420) classifies even-width cycles of digit sum \(9m\) and obtains periods in \(\{1,3,5,7\}\).
+- [Chen, Ono, Schwartz, and Thakur](https://cs.uwaterloo.ca/journals/JIS/VOL29/Ono/ono3.html) show that every four-digit odd-base orbit enters a stable region within three difference-coordinate steps and is then conjugate to projective doubling. The version of record is Journal of Integer Sequences 29 (2026), Article 26.4.7. The associated [Lean artifact](https://github.com/AxiomMath/kaprekar4) formalizes the main result.
 
 ### Logit uncertainty and calibration
 
@@ -58,13 +61,15 @@ The workspace is now a real research-software project: strict APIs, exact functi
 - [Estimating LLM Uncertainty with Evidence](https://arxiv.org/abs/2502.00290) is the correct title and record for LogTokU; the PDF's reference title/authors/method name need correction.
 - [Towards Generation-Efficient Uncertainty Estimation (May 2026)](https://arxiv.org/abs/2605.06053) introduces Logit Magnitude and an input-only distilled estimator. It is a direct cost/performance baseline.
 - [Min-k Sampling (ACL 2026)](https://arxiv.org/abs/2604.11012) analyzes local shapes and cliffs in sorted logits with temperature invariance. It is the closest direct logit-shape competitor.
+- [HALT](https://arxiv.org/abs/2602.02888) detects hallucinations from the top-20 log-probabilities read as a time series. It is the closest top-k log-probability competitor and a planned baseline, not a reported result.
 - [Future Confidence Distillation (8 July 2026)](https://arxiv.org/abs/2607.07626) reports stronger post-solution and hidden-state confidence signals and distills them into pre-solution features. It is very recent and should be labeled promising, not established.
 - [SCoRE (2026)](https://arxiv.org/abs/2603.24704), [adaptive conformal factuality](https://arxiv.org/abs/2604.13991), and [ORCA](https://arxiv.org/abs/2604.01170) show why “wrap it with conformal” is not a complete method specification.
 
 ### Speculative decoding
 
 - Exact distribution-preserving foundations: [Leviathan, Kalman, and Matias](https://arxiv.org/abs/2211.17192) and [Chen et al.](https://arxiv.org/abs/2302.01318).
-- [MARS](https://arxiv.org/abs/2601.15498) already proposes margin-aware relaxed verification using target logits and reports large-model experiments. This is a direct novelty collision.
+- [MARS](https://doi.org/10.18653/v1/2026.findings-acl.421) (Findings of ACL 2026; earlier preprint arXiv:2601.15498) already proposes margin-aware relaxed verification using target logits and reports large-model experiments. This is a direct novelty collision.
+- [AdaptiveSpec](https://arxiv.org/abs/2609.02897) accepts a mismatched draft token when \(p(\mathrm{draft})/p(\mathrm{top}\text{-}1)\ge\kappa\). That is the capped ratio gate discussed in the manuscript, and the authors describe it as lossy.
 - [When Is a Draft Accepted? (June 2026)](https://arxiv.org/abs/2606.30265) gives exact KL rejection certificates and sharp margin bounds for strict, relaxed, top-m, entropy, and tree criteria. It is much stronger than the manuscript's ratio restatement.
 - [LK Losses](https://arxiv.org/abs/2602.23881) directly optimizes acceptance objectives, while [Flatter Tokens](https://arxiv.org/abs/2601.18902) studies the value of low-margin target distributions for draft training.
 
