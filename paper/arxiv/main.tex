@@ -73,10 +73,12 @@ predictive improvement follows from the reparameterization alone.  We also
 derive the exact accept-and-residual condition for distribution-preserving
 speculative sampling and show why a target-only rank or margin gate is not
 exact in general.  An independent integer-arithmetic checker exhaustively
-verifies 49 finite systems comprising 3,816,497 raw states, while a separate
-Lean development mechanizes the core pairing identities and part of the
-counting argument.  No empirical large-language-model performance claim is
-made.
+verifies 49 finite systems comprising 3,816,497 raw states.  A separate Lean
+development mechanizes the pairing identities, outer-gap factorization, the
+equivalence between digit multisets and weakly decreasing spectra, and the
+injective image count of the linear reconstruction.  It does not mechanize the
+raw-integer bridge, weighted graphs, or the logit and speculative theorems.
+No empirical large-language-model performance claim is made.
 \end{abstract}
 
 \noindent\textbf{Keywords:}
@@ -116,8 +118,9 @@ hallucination detection, selective prediction, routing, or decoding speed.
 The main contributions are:
 \begin{enumerate}[leftmargin=*,itemsep=2pt]
   \item an explicit factorization $K_{b,n}=\Lambda_{b,n}\circ\Sigma_{b,n}$,
-        a superincreasing proof of injectivity, and an exact image-cardinality
-        theorem valid also for width one;
+        an arbitrary-base superincreasing proof of injectivity, and an exact
+        image-cardinality theorem valid also for width one, with the base-10
+        same-image criterion credited to Nuez;
   \item an exact conjugacy on the one-step image and a reconstruction theorem
         for the entire raw functional graph using spectrum-fiber weights;
   \item exact raw basin, depth, and entropy formulas, together with certified
@@ -147,11 +150,22 @@ points \cite{hasse1978,prichett1981}.  The 1981 paper explicitly introduced
 arbitrary-base outer-difference tuples and stated that the transformation
 depends entirely on them.  Later work studied higher bases, symmetries, fixed
 points, cycles, and convergence distances
-\cite{walden2005,devlin2020,nuez2022,kay2022,kay2024}.  Iwasaki gave an
+\cite{walden2005,devlin2020,nuez2022,kay2022,kay2024}.  In base 10, Nuez
+states that two fixed-width inputs have the same Kaprekar image if and only if
+their outer-difference parameters agree \cite[eq.~(14)]{nuez2022}.  That paper
+counts 219 parametric classes at widths 6 and 7, after excluding identical
+digits.  Both widths have $m=3$, and 219 plus the excluded all-zero class is
+$220=\binom{12}{3}$.  Mayne, Shapiro, and Van Cott classify families of
+decimal 2-cycles \cite{mayne2026}.  Dolan classifies even-width cycles whose
+members have digit sum $9m$, called K-cycles, and shows that their periods
+lie in $\{1,3,5,7\}$ \cite{dolan2026kcycles}.  Iwasaki gave an
 explicit modern classification of decimal nonzero fixed points and clarified
 the distinction between a fixed point and a globally attracting Kaprekar
 constant \cite{iwasaki2024}.  Dahl analyzed attractor-basin entropy and
-coarse-grained drift fields for decimal systems \cite{dahl2026}.
+coarse-grained drift fields for decimal widths 3 through 6 \cite{dahl2026}.
+arXiv:2512.05124 is an earlier preprint of that article
+\cite{dahl2025preprint}, not a separate result; the basin comparison below
+cites the Entropy version.
 
 Very recent work by Chen, Ono, Schwartz, and Thakur gives a much stronger
 number-theoretic classification for four-digit odd bases: after a bounded
@@ -163,10 +177,12 @@ image, graph, and weight structure, but do not reproduce the odd-base
 classification.
 
 The defensible novelty claim is therefore deliberately narrow.  We do not
-claim the discovery of outer-gap reduction.  We claim the explicit
-superincreasing encoding, exact image cardinality, post-first-step conjugacy,
-complete weighted-graph reconstruction, and their information-theoretic
-consequences.
+claim the discovery of outer-gap reduction, which is classical
+\cite{prichett1981}.  We do not claim base-10 injectivity of the
+outer-difference parameters: that correspondence is Nuez's equation (14).
+The contribution is the arbitrary-base superincreasing proof, the closed-form
+image count, post-first-step conjugacy, complete weighted-graph
+reconstruction, and their information-theoretic consequences.
 
 \subsection{Logit uncertainty and speculative decoding}
 
@@ -176,9 +192,12 @@ shows that entropy-only selective policies can fail in model-dependent ways
 and that hybrid scores can improve measured risk--coverage behavior on some
 benchmarks \cite{phillips2026}.  Other direct baselines include logit-magnitude
 methods \cite{zhu2026} and local sorted-logit geometry such as Min-$k$
-sampling \cite{ding2026}.  These works make an information-matched raw
-relative-logit baseline mandatory for any future experiment on the coordinates
-studied here.
+sampling \cite{ding2026}.  The closest top-$k$ log-probability competitor for
+a future benchmark is HALT, which reads the top-20 token log-probabilities as
+a time series \cite{shapiro2026halt}.  It is a planned baseline only; this
+paper reports no comparison and no reliability gain.  These works make an
+information-matched raw relative-logit baseline mandatory for any future
+experiment on the coordinates studied here.
 
 Exact speculative decoding uses modified rejection sampling to preserve the
 target distribution \cite{leviathan2023,chen2023speculative}.  Margin-aware
@@ -322,6 +341,21 @@ determined by the weak composition
 Stars and bars gives $\binom{m+b-1}{b-1}$.  This argument also covers $m=0$,
 where there is one empty spectrum.
 \end{proof}
+
+\begin{remark}[Base-10 prior art]\label{rem:nuez}
+For $b=10$, the criterion that two inputs have the same image exactly when
+their outer-difference parameters agree is \cite[eq.~(14)]{nuez2022}.  Nuez
+counts 219 parametric classes at widths 6 and 7.  Both widths have $m=3$, and
+the count excludes the all-zero class of identical digits.  Adding that class
+gives
+\[
+  219+1=220=\binom{12}{3}=\binom{10+3-1}{3},
+\]
+which is \eqref{eq:image-cardinality}.  Theorem~\ref{thm:image} is an
+arbitrary-base proof, by superincreasing coefficients, together with the
+closed-form count for every base and width.  Base-10 injectivity is not
+claimed as new.
+\end{remark}
 
 \begin{corollary}[Fixed-base compression]\label{cor:compression}
 For fixed $b$,
@@ -554,6 +588,18 @@ the dominant observed behavior at these widths.  This does not contradict the
 special global role of 6174: among the decimal fixed-width strings of width
 four, the ten repdigits enter zero and the other 9,990 states reach 6174 in at
 most seven steps.
+
+The nonzero basin sizes at widths five and six agree with the sizes reported
+by Dahl \cite{dahl2026}: 48,480, 48,320, and 3,190 at width five, and 935,520,
+62,520, and 1,950 at width six.  These are the sizes stored in
+\path{results/decimal_dynamics.json}.  Each width in that file also has a
+ten-state repdigit basin leading to zero.  Dahl's normalisation excludes
+repdigits, so the ambient counts differ by those ten states while the nonzero
+basin sizes match.  The width-five 2-cycle through 53,955 and 59,994 is a
+cycle studied by Mayne, Shapiro, and Van Cott \cite{mayne2026}.  At the even
+widths six and eight, the nonzero cycle periods in
+Table~\ref{tab:decimal-basins} lie in $\{3,7\}$, inside the period set
+$\{1,3,5,7\}$ obtained by Dolan for K-cycles \cite{dolan2026kcycles}.
 
 The table is a finite certified computation, not a universal theorem.  The
 ordered transition and weight data are stored in
@@ -843,14 +889,20 @@ arbitrarily small ratio as $D$ grows.  Adding an absolute cap
   s_1-s_r\leq\varepsilon
 \]
 ensures $p_r/p_1\geq e^{-\varepsilon}$, but still does not make the rule exact.
-Lossless uses of the geometry may change draft length or verification effort
-while retaining the standard $p/q$ accept-and-correct mechanism.
+The same ratio test is the lossy gate used by AdaptiveSpec: a mismatched draft
+token is promoted when
+$p(\mathrm{draft})/p(\mathrm{top\text{-}1})\geq\kappa$
+\cite{urban2026adaptivespec}.  Their paper describes the gate as lossy.  It
+omits the proposal distribution $q$ and does not satisfy
+\eqref{eq:residual-condition}.  Lossless uses of the geometry may change
+draft length or verification effort while retaining the standard $p/q$
+accept-and-correct mechanism.
 
 This distinction separates three objectives: exact sampling preserves $p$;
 relaxed verification intentionally changes the distribution and must measure
 that change; semantic or judge-based decoding optimizes a different downstream
 criterion.  Margin-aware relaxed verification and stronger acceptance
-certificates already exist \cite{song2026mars,sharma2026}; the elementary ratio
+certificates already exist \cite{song2026mars,urban2026adaptivespec,sharma2026}; the elementary ratio
 identity above does not supersede them.
 
 \section{A conditional selective-risk guarantee}
@@ -919,14 +971,16 @@ The certificate proves its declared finite grid, not all bases and widths.
 \subsection{Formalization scope}
 
 The pinned Lean project in \path{proofs/lean/} mechanizes the universal
-even/odd pairing identities, the outer-gap factorization, and the cardinality
-of an order-free gap multiset type.  It does not yet mechanize the complete
-equivalence with weakly decreasing spectra, the injectivity-to-image bridge,
-weighted graph reconstruction, logit theorems, or speculative residual
-theorem.  The paper therefore describes the result as partially formalized,
-not fully machine-checked.  The independent Lean artifact accompanying the
-odd-base four-digit classification \cite{chenkaprekar2026} is separate prior
-work.
+even/odd pairing identities, the outer-gap factorization for an arbitrary
+digit vector, the equivalence between digit multisets and weakly decreasing
+spectra, and the injective image count of the linear reconstruction on those
+spectra.  The count uses the existing multiset cardinality and
+\texttt{Finset.card\_image\_of\_injOn}.  It does not mechanize the bridge from
+raw fixed-width integers to those spectra, weighted graph reconstruction,
+basin or entropy theorems, logit theorems, or the speculative residual
+theorem.  Only the statements present in that Lean file are machine-checked.
+The independent Lean artifact accompanying the odd-base four-digit
+classification \cite{chenkaprekar2026} is separate prior work.
 
 \begin{table}[ht]
 \centering
@@ -937,7 +991,7 @@ work.
 \toprule
 Claim & Strongest evidence \\
 \midrule
-Factorization, injectivity, image count & Universal proof; factorization partially formalized \\
+Factorization, injectivity, image count & Universal proof. Lean checks factorization, the spectrum equivalence, and the linear image count; the raw-integer bridge is not formalized \\
 Conjugacy, full graph, weighted basins, entropy & Universal proof; independent finite stress test \\
 Decimal cycle identities and basin sizes & Exact finite certificate \\
 Odd-base four-digit projective doubling & External theorem and external Lean artifact \\
@@ -958,7 +1012,8 @@ future test must control.  At minimum, a preregistered benchmark should include:
         unrestricted sorted-logit offset control;
   \item $u$-only, $D$-only, $(D,u)$, token-identity, and tail-log-mass ablations;
   \item maximum probability, entropy, raw margin, conditional top-$k$ entropy,
-        semantic and hidden-state methods, and hybrid baselines;
+        semantic and hidden-state methods, hybrid baselines, and a planned
+        HALT-style top-$k$ log-probability baseline \cite{shapiro2026halt};
   \item several predeclared values of $k$, temperature rescaling, and
         within-domain, cross-domain, cross-model, and prompt shifts;
   \item question- or sequence-disjoint train, calibration, and untouched test
@@ -982,7 +1037,7 @@ The only empirical hypotheses retained are:
   prove that any such hybrid will succeed.
   \item[H3.] Gap diagnostics may help allocate exact verification effort or
   draft length.  Any distribution-changing margin rule must be evaluated
-  against MARS and exact speculative sampling.
+  against MARS, AdaptiveSpec, and exact speculative sampling.
 \end{description}
 
 These hypotheses are falsifiable and are not promoted to conclusions in this
@@ -991,9 +1046,10 @@ paper.
 \section{Limitations and consequences}
 
 \paragraph{Prior-art limitation.}
-Outer-difference dependence is classical \cite{prichett1981}.  The contribution
-is the explicit injective code and its graph-theoretic consequences, not the
-original discovery of the coordinate idea.
+Outer-difference dependence is classical \cite{prichett1981}.  Base-10
+injectivity of those parameters is due to Nuez \cite[eq.~(14)]{nuez2022}.
+The contribution is the arbitrary-base injective code, the closed-form count,
+and their graph-theoretic consequences.
 
 \paragraph{Finite versus universal evidence.}
 The exhaustive certificate covers exactly its stated grid.  Decimal basin
